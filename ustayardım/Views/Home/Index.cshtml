@@ -1,0 +1,1488 @@
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main-css/styles.css"/>
+    <link rel="stylesheet" href="css/main-css/burada.css">
+    <link rel="stylesheet" href="css/main-css/icon.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>USTA Yardım</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__logo"><a href="#">Usta Yardım</a></div>
+        <ul class="nav__links">
+          <li class="link"><a href="#anasayfa">Anasayfa</a></li>
+          <li class="link"><a href="#kategoriler">Kategoriler</a></li>
+          <li class="link"><a href="#nasil-calisir">Nasıl Çalışır?</a></li>
+          <li class="link"><a href="#usta-rehberi">Usta Rehberi</a></li>
+          <li class="link"><a href="/Login">Usta Girişi</a></li>
+          <li class="link"><a href="/Login">Müşteri Girişi</a></li>
+        </ul>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <section id="homeSearch">
+            <div class="top">
+              <h1>Her işin ustası burada!</h1>
+              <h2>İşinin erbabı ustaları hemen bul, 
+                <b>hemen ara</b></h2><div class="search">
+                  <div class="input"><i class="ri-search-line"></i>
+                    <input type="text" placeholder="Örnek : Çankaya beyaz eşya servisi" data-search="">
+                    <button>Ara</button>
+                  </div>
+             <div class="search-results"></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </header>
+    <section class="section__container trending__container" id="trending">
+      <div class="section__header">
+        <h2 class="section__title">Popüler Hizmetler 2023</h2>
+        <div class="section__nav">
+          <span><i class="ri-arrow-left-s-line"></i></span>
+          <span><i class="ri-arrow-right-s-line"></i></span>
+        </div>
+      </div>
+      <div class="trending__grid">
+        <div class="trending__card">
+          <img src="img/boya-badana.png" alt="trending" />
+          <h1>Boya ve Badana</h1>
+          <div class="trending__details">
+            <div class="price">
+              <p>Ortalama</p>
+              <h3>₺957.50</h3>
+              <p>*Fiyat değişiklik gösterir</p>
+            </div>
+            <div class="trending__ratings">
+              <div class="stars">
+                <span><p class="rating">(4.8)</p></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-fill"></i></span>
+                <span><i class="ri-star-line"></i></span>
+              </div>
+              <p>[10 onaylı yorum]</p>
+            </div>
+          </div>
+          <div class="context">            
+            <p>
+            <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+          </p>
+            <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+              <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+          </div>
+        </div>
+        <div class="trending__card">
+          <img src="img/su-tesisatcisi.png" alt="trending" />
+          <h1>Su Tesisatçısı</h1>
+          <div class="trending__details">
+            <div class="price">
+              <p>Ortalama</p>
+              <h3>₺500.50</h3>
+              <p>*Fiyat değişiklik gösterir</p>
+            </div>
+            <div class="trending__ratings">
+              <div class="stars">
+                <span><p class="rating">(4.2)</p></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-fill"></i></span>
+                <span><i class="ri-star-line"></i></span>
+              </div>
+              <p>[25 onaylı yorum]</p>
+            </div>
+          </div>
+          <div class="context">            
+            <p>
+            <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+          </p>
+            <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+              <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+          </div>
+        </div>
+        <div class="trending__card">
+          <img src="img/evden-eve-nakliyat.png" alt="trending" />
+          <h1>Evden Eve Nakliyat</h1>
+          <div class="trending__details">
+            <div class="price">
+              <p>Ortalama</p>
+              <h3>₺745.00</h3>
+              <p>*Fiyat değişiklik gösterir</p>
+            </div>
+            <div class="trending__ratings">
+              <div class="stars">
+                <span><p class="rating">(4.5)</p></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-fill"></i></span>
+                <span><i class="ri-star-line"></i></span>
+              </div>
+              <p>[15 onaylı yorum]</p>
+            </div>
+          </div>
+          <div class="context">            
+            <p>
+            <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+          </p>
+            <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+              <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+          </div>
+        </div>
+          <div class="trending__card">
+            <img src="img/kombi-servisi.png" alt="trending" />
+            <h1>Kombi Servisi</h1>
+            <div class="trending__details">
+              <div class="price">
+                <p>Ortalama</p>
+                <h3>₺957.50</h3>
+                <p>*Fiyat değişiklik gösterir</p>
+              </div>
+              <div class="trending__ratings">
+                <div class="stars">
+                  <span><p class="rating">(4.8)</p></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-half-fill"></i></span>
+                  <span><i class="ri-star-line"></i></span>
+                </div>
+                <p>[10 onaylı yorum]</p>
+              </div>
+            </div>
+            <div class="context">            
+              <p>
+              <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+            </p>
+              <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+                <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+            </div>
+          </div>
+          <div class="trending__card">
+            <img src="img/parkeci.png" alt="trending" />
+            <h1>Parke Laminant Döşeme</h1>
+            <div class="trending__details">
+              <div class="price">
+                <p>Ortalama</p>
+                <h3>₺500.50</h3>
+                <p>*Fiyat değişiklik gösterir</p>
+              </div>
+              <div class="trending__ratings">
+                <div class="stars">
+                  <span><p class="rating">(4.2)</p></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-half-fill"></i></span>
+                  <span><i class="ri-star-line"></i></span>
+                </div>
+                <p>[25 onaylı yorum]</p>
+              </div>
+            </div>
+            <div class="context">            
+              <p>
+              <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+            </p>
+              <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+                <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+            </div>
+          </div>
+          <div class="trending__card">
+            <img src="img/beyaz-esya-servisi.png" alt="trending" />
+            <h1>Beyaz Eşya Servisi</h1>
+            <div class="trending__details">
+              <div class="price">
+                <p>Ortalama</p>
+                <h3>₺745.00</h3>
+                <p>*Fiyat değişiklik gösterir</p>
+              </div>
+              <div class="trending__ratings">
+                <div class="stars">
+                  <span><p class="rating">(4.5)</p></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-half-fill"></i></span>
+                  <span><i class="ri-star-line"></i></span>
+                </div>
+                <p>[15 onaylı yorum]</p>
+              </div>
+            </div>
+            <div class="context">            
+              <p>
+              <span><i class="ri-check-line"></i></span>Ücretsiz İptal
+            </p>
+              <button data-filter-modal="feed/filter?category_id=342487&amp;location_id=0&amp;service_id=0&amp;hash=1700053958">
+                <i class="ri-map-pin-line"></i>En Yakın Ustalar</button>
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+    <section class="tour">
+      <div class="section__container tour__container">
+        <h4>İşinin Ustaları Burada!</h4>
+        <div class="video__container">
+          <video src="assets/video.mp4" autoplay loop muted></video>
+        </div>
+      </div>
+    </section>
+    
+    <div class="section__header" style="justify-content: center; margin-top: 4rem; margin-bottom:2rem;">
+      <h2 class="section__title">Favori Ustalar</h2>
+    </div>
+    <section id="profileList" class="container">
+      <div id="_360580" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,7
+                </div>
+                <button data-flip="back" data-target="_360580" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./seyfi-bostan-p360580">
+                  <picture>
+                    <source  type="image/webp" >
+                    <source  type="image/jpeg" >
+                    <img class="ll entered loaded" alt="Seyfi Bostan" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./seyfi-bostan-p360580" class="name">Seyfi Bostan</a>
+              <a href="./seyfi-bostan-p360580" class="location">Ankara / Altındağ</a>
+              <a href="./seyfi-bostan-p360580" class="category">Marangoz / Mobilyacı</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./seyfi-bostan-p360580" class="name">Seyfi Bostan</a>
+                <a href="./seyfi-bostan-p360580" class="location">Ankara / Altındağ</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 24 30</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360580" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360580" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360580" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Seyfi Bostan</a>
+              </p>
+              <a class="light" href="./">Ankara / Altındağ</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./marangoz-mobilya">Marangoz / Mobilyacı</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505622430">
+              <span>Hemen Ara <b>0850 562 24 30</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./seyfi-bostan-p360580">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_360188" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,8
+                </div>
+                <button data-flip="back" data-target="_360188" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./kanaat-yapi-p360188">
+                  <picture>
+                    <img class="ll entered loaded" alt="İsmail İdiz" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./kanaat-yapi-p360188" class="name">İsmail İdiz</a>
+              <a href="./kanaat-yapi-p360188" class="location">Balıkesir / Bandırma</a>
+              <a href="./kanaat-yapi-p360188" class="category">Alçı / Asma Tavan / Kartonpiyer</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./kanaat-yapi-p360188" class="name">İsmail İdiz</a>
+                <a href="./kanaat-yapi-p360188" class="location">Balıkesir / Bandırma</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 11 41</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360188" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360188" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360188" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">İsmail İdiz</a>
+              </p>
+              <a class="light" href="./">Balıkesir / Bandırma</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./alcipan-alci-kartonpiyer">Alçı / Asma Tavan / Kartonpiyer</a>
+                </li>
+                <li>
+                  <a href="./boyaci">Boya Badana / Boyacı</a>
+                </li>
+                <li>
+                  <a href="./laminant-parkeci">Laminat Parkeci</a>
+                </li>
+                <li>
+                  <a href="./cati-kaplama-izolasyon">Çatı Kaplama / İzolasyon</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505621141">
+              <span>Hemen Ara <b>0850 562 11 41</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./kanaat-yapi-p360188">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_360894" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>10
+                </div>
+                <button data-flip="back" data-target="_360894" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./kilinc-elektrik-p360894">
+                  <picture>
+                    <img class="ll entered loaded" alt="Hüseyin Kılınç" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./kilinc-elektrik-p360894" class="name">Hüseyin Kılınç</a>
+              <a href="./kilinc-elektrik-p360894" class="location">Konya / Karatay</a>
+              <a href="./kilinc-elektrik-p360894" class="category">Elektrikçi</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./kilinc-elektrik-p360894" class="name">Hüseyin Kılınç</a>
+                <a href="./kilinc-elektrik-p360894" class="location">Konya / Karatay</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 14 68</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360894" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360894" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360894" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Hüseyin Kılınç</a>
+              </p>
+              <a class="light" href="./">Konya / Karatay</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./elektrikci">Elektrikçi</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505621468">
+              <span>Hemen Ara <b>0850 562 14 68</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./kilinc-elektrik-p360894">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_360711" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>10
+                </div>
+                <button data-flip="back" data-target="_360711" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./fatih-usta-yapi-insaat-p360711">
+                  <picture>
+                    <img class="ll entered loaded" alt="Fatih Demir" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./fatih-usta-yapi-insaat-p360711" class="name">Fatih Demir</a>
+              <a href="./fatih-usta-yapi-insaat-p360711" class="location">Konya / Karatay</a>
+              <a href="./fatih-usta-yapi-insaat-p360711" class="category">Anahtar Teslim Tadilat</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./fatih-usta-yapi-insaat-p360711" class="name">Fatih Demir</a>
+                <a href="./fatih-usta-yapi-insaat-p360711" class="location">Konya / Karatay</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 07 12</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360711" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360711" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360711" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Fatih Demir</a>
+              </p>
+              <a class="light" href="./">Konya / Karatay</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./anahtar-teslim-tadilat">Anahtar Teslim Tadilat</a>
+                </li>
+                <li>
+                  <a href="./fayans-kaplama">Fayans Kaplama</a>
+                </li>
+                <li>
+                  <a href="./boyaci">Boya Badana / Boyacı</a>
+                </li>
+                <li>
+                  <a href="./mantolama-izolasyon-yalitim">Dış Cephe Kaplama / Mantolama</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505620712">
+              <span>Hemen Ara <b>0850 562 07 12</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./fatih-usta-yapi-insaat-p360711">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_361455" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,9
+                </div>
+                <button data-flip="back" data-target="_361455" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./salih-mobilya-montaj-tamiri-p361455">
+                  <picture>
+                    <img class="ll entered loaded" alt="Erkan Sarıca" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./salih-mobilya-montaj-tamiri-p361455" class="name">Erkan Sarıca</a>
+              <a href="./salih-mobilya-montaj-tamiri-p361455" class="location">İstanbul / Kadıköy</a>
+              <a href="./salih-mobilya-montaj-tamiri-p361455" class="category">Marangoz / Mobilyacı</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./salih-mobilya-montaj-tamiri-p361455" class="name">Erkan Sarıca</a>
+                <a href="./salih-mobilya-montaj-tamiri-p361455" class="location">İstanbul / Kadıköy</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 24 34</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/361455" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_361455" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="361455" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Erkan Sarıca</a>
+              </p>
+              <a class="light" href="./">İstanbul / Kadıköy</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./marangoz-mobilya">Marangoz / Mobilyacı</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505622434">
+              <span>Hemen Ara <b>0850 562 24 34</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./salih-mobilya-montaj-tamiri-p361455">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_359930" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,7
+                </div>
+                <button data-flip="back" data-target="_359930" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./yalin-tesisat-eskisehir-p359930">
+                  <picture>
+                    <img class="ll entered loaded" alt="Gökhan Yalın" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./yalin-tesisat-eskisehir-p359930" class="name">Gökhan Yalın</a>
+              <a href="./yalin-tesisat-eskisehir-p359930" class="location">Eskişehir / Odunpazarı</a>
+              <a href="./yalin-tesisat-eskisehir-p359930" class="category">Su Tesisatçısı</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./yalin-tesisat-eskisehir-p359930" class="name">Gökhan Yalın</a>
+                <a href="./yalin-tesisat-eskisehir-p359930" class="location">Eskişehir / Odunpazarı</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 28 98</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/359930" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_359930" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="359930" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Gökhan Yalın</a>
+              </p>
+              <a class="light" href="./">Eskişehir / Odunpazarı</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./su-tesisatcisi">Su Tesisatçısı</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505622898">
+              <span>Hemen Ara <b>0850 562 28 98</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./yalin-tesisat-eskisehir-p359930">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_359612" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>10
+                </div>
+                <button data-flip="back" data-target="_359612" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./elmas-isi-muhendislik-p359612">
+                  <picture>
+                    <img class="ll entered loaded" alt="Mesut Elmas" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./elmas-isi-muhendislik-p359612" class="name">Mesut Elmas</a>
+              <a href="./elmas-isi-muhendislik-p359612" class="location">Balıkesir / Bandırma</a>
+              <a href="./elmas-isi-muhendislik-p359612" class="category">Su Tesisatçısı</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./elmas-isi-muhendislik-p359612" class="name">Mesut Elmas</a>
+                <a href="./elmas-isi-muhendislik-p359612" class="location">Balıkesir / Bandırma</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 19 22</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/359612" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_359612" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="359612" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Mesut Elmas</a>
+              </p>
+              <a class="light" href="./">Balıkesir / Bandırma</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./su-tesisatcisi">Su Tesisatçısı</a>
+                </li>
+                <li>
+                  <a href="./dogalgaz-tesisatcisi">Doğalgaz Tesisatçısı</a>
+                </li>
+                <li>
+                  <a href="./su-aritma-cihazi">Su Arıtma Cihazı</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505621922">
+              <span>Hemen Ara <b>0850 562 19 22</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./elmas-isi-muhendislik-p359612">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_360182" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>10
+                </div>
+                <button data-flip="back" data-target="_360182" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./aslan-tokmak-p360182">
+                  <picture>
+                    <img class="ll entered loaded" alt="Aslan Tokmak" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./aslan-tokmak-p360182" class="name">Aslan Tokmak</a>
+              <a href="./aslan-tokmak-p360182" class="location">Bursa / Nilüfer</a>
+              <a href="./aslan-tokmak-p360182" class="category">Elektrikçi</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./aslan-tokmak-p360182" class="name">Aslan Tokmak</a>
+                <a href="./aslan-tokmak-p360182" class="location">Bursa / Nilüfer</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 04 02</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360182" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360182" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360182" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Aslan Tokmak</a>
+              </p>
+              <a class="light" href="./">Bursa / Nilüfer</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./elektrikci">Elektrikçi</a>
+                </li>
+                <li>
+                  <a href="./uydu-montaj-kurulum">Uydu Servisi / Uyducu</a>
+                </li>
+                <li>
+                  <a href="./guvenlik-kamera-sistemleri">Güvenlik Kamera Sistemleri</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505620402">
+              <span>Hemen Ara <b>0850 562 04 02</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./aslan-tokmak-p360182">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_361035" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,9
+                </div>
+                <button data-flip="back" data-target="_361035" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./cemalettin-genc-p361035">
+                  <picture>
+                    <img class="ll entered loaded" alt="Cemalettin Genç" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./cemalettin-genc-p361035" class="name">Cemalettin Genç</a>
+              <a href="./cemalettin-genc-p361035" class="location">İstanbul / Şişli</a>
+              <a href="./cemalettin-genc-p361035" class="category">Uydu Servisi / Uyducu</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./cemalettin-genc-p361035" class="name">Cemalettin Genç</a>
+                <a href="./cemalettin-genc-p361035" class="location">İstanbul / Şişli</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 64 90</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/361035" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_361035" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="361035" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">Cemalettin Genç</a>
+              </p>
+              <a class="light" href="./">İstanbul / Şişli</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./uydu-montaj-kurulum">Uydu Servisi / Uyducu</a>
+                </li>
+                <li>
+                  <a href="./elektrikci">Elektrikçi</a>
+                </li>
+                <li>
+                  <a href="./guvenlik-kamera-sistemleri">Güvenlik Kamera Sistemleri</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505626490">
+              <span>Hemen Ara <b>0850 562 64 90</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./cemalettin-genc-p361035">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="_361066" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  <i class="ubi ubi-star"></i>9,8
+                </div>
+                <button data-flip="back" data-target="_361066" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="./girgin-ahsap-p361066">
+                  <picture>
+                    <img class="ll entered loaded" alt="İlker Girgin" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="./girgin-ahsap-p361066" class="name">İlker Girgin</a>
+              <a href="./girgin-ahsap-p361066" class="location">Balıkesir / Edremit</a>
+              <a href="./girgin-ahsap-p361066" class="category">Marangoz / Mobilyacı</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="./girgin-ahsap-p361066" class="name">İlker Girgin</a>
+                <a href="./girgin-ahsap-p361066" class="location">Balıkesir / Edremit</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>0850 562 26 46</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/361066" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_361066" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="361066" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="./">İlker Girgin</a>
+              </p>
+              <a class="light" href="./">Balıkesir / Edremit</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="./marangoz-mobilya">Marangoz / Mobilyacı</a>
+                </li>
+                <li>
+                  <a href="./anahtar-teslim-tadilat">Anahtar Teslim Tadilat</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="tel:908505622646">
+              <span>Hemen Ara <b>0850 562 26 46</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="./girgin-ahsap-p361066">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="./" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container" id="client">
+      <div class="section__header">
+        <h2 class="section__title">Müşteri Geri Bildirimi</h2>
+        <div class="section__nav">
+          <span><i class="ri-arrow-left-s-line"></i></span>
+          <span><i class="ri-arrow-right-s-line"></i></span>
+        </div>
+      </div>
+      <div class="client__grid">
+        <div class="client__card">
+          <div class="client__card__header">
+            <span><i class="ri-double-quotes-r"></i></span>
+            <div class="ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+            </div>
+          </div>
+          <strong>Ev ve Ofis Temizliği</strong>
+          <p>
+            Hızlı bir şekilde güvenilir temizlik hizmeti verenlerle iletişim kurmamı 
+            ve bu hizmeti almamı sağlayan
+            sağlayan Usta Yardıma'a teşekkür ederim!
+          </p>
+          <div class="client__card__footer">
+            <img src="assets/client-1.jpg" alt="client" />
+            <div class="client__details">
+              <h4>Okan İ.</h4>
+              <p>Tapu Müdürü</p>
+            </div>
+          </div>
+        </div>
+        <div class="client__card">
+          <div class="client__card__header">
+            <span><i class="ri-double-quotes-r"></i></span>
+            <div class="ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+          </div>
+          <strong>Mobilya ve Marangoz</strong>
+          <p>
+            İşinde gerçekten usta, montaj ve tesisat işlerimiz vardı. 
+            Çok titiz ve temiz çalışıyor, çok memnun kaldık. 
+            Her şey için teşekkür ederiz.
+          </p>
+          <div class="client__card__footer">
+            <img src="assets/client-2.jpg" alt="client" />
+            <div class="client__details">
+              <h4>Ömer Y.</h4>
+              <p>Cumhuriyet Savcısı</p>
+            </div>
+          </div>
+        </div>
+        <div class="client__card">
+          <div class="client__card__header">
+            <span><i class="ri-double-quotes-r"></i></span>
+            <div class="ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+            </div>
+          </div>
+          <strong>Isıtma, Soğutma ve Havalandırma</strong>
+          <p>
+            Kombi tesisatı için hizmet aldım. Tam saatinde geldi. 
+            Eli çabuk ve oldukça tecrübeliydi. 
+            Sorunu tek seferde halletti. Gayet memnun kaldım.
+          </p>
+          <div class="client__card__footer">
+            <img src="assets/client-3.jpg" alt="client" />
+            <div class="client__details">
+              <h4>Engin N.</h4>
+              <p>Kimya Mühendisi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <h4>Güncellemelerden haberdar olmak için abone olun.</h4>
+        <form action="/">
+          <input type="text" placeholder="Lütfen e-posta adresinizi girin." />
+          <button class="btn">Abone Ol</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h5>Usta Yardım</h5>
+          <p>
+            Usta Yardım Türkiye, hayatınızı kolaylaştıracak hizmetlere kolayca ulaşmanızı sağlayan, işin ehli ustalar ile hızlı, güvenilir ve kaliteli hizmet sunan bir teknoloji şirketidir.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Usta Yardım</h4>
+          <a href="#anasayfa">Anasayfa</a>
+          <a href="#kategoriler">Kategoriler</a>
+          <a href="#nasil-calisir">Nasıl Çalışır?</a>
+          <a href="#">Usta Rehberi</a>
+          <a href="#">İletişim</a>
+        </div>
+        <div class="footer__col">
+          <h4>Popüler Hizmetler</h4>
+          <a href="#">Boya ve Badana</a>
+          <a href="#">Ev ve Ofis Temizlik</a>
+          <a href="#">Çilingir</a>
+          <a href="#">Su Tesisatı</a>
+        </div>
+        <div class="footer__col">
+          <h4>Bizi takip edin</h4>
+          <div class="footer__socials">
+            <span>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Usta Yardım Web Teknolojileri. Tüm hakları saklıdır.
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
