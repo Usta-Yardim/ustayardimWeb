@@ -1,0 +1,429 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ustayardım.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ustayardım.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\client-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\client-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\client-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\client-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\client-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\client-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\subscribe.jpg",
+      "PackagePath": "staticwebassets\\assets\\subscribe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\usta.jpg",
+      "PackagePath": "staticwebassets\\assets\\usta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\ustalik-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\ustalik-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\video.mp4",
+      "PackagePath": "staticwebassets\\assets\\video.mp4"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiEyp8kv8JHgFVrJJbecmNE.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiEyp8kv8JHgFVrJJbecmNE.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiEyp8kv8JHgFVrJJfecg.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiEyp8kv8JHgFVrJJfecg.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\fonts\\pxiEyp8kv8JHgFVrJJnecmNE.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\pxiEyp8kv8JHgFVrJJnecmNE.woff2"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\googleapis-font.css",
+      "PackagePath": "staticwebassets\\css\\googleapis-font.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\loginstyle.css",
+      "PackagePath": "staticwebassets\\css\\loginstyle.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\burada.css",
+      "PackagePath": "staticwebassets\\css\\main-css\\burada.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\icon.css",
+      "PackagePath": "staticwebassets\\css\\main-css\\icon.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\main-css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\apartman-temizligi.png",
+      "PackagePath": "staticwebassets\\img\\apartman-temizligi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\ayakkabi-tamiri.png",
+      "PackagePath": "staticwebassets\\img\\ayakkabi-tamiri.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\beyaz-esya-servisi.png",
+      "PackagePath": "staticwebassets\\img\\beyaz-esya-servisi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\boya-badana.png",
+      "PackagePath": "staticwebassets\\img\\boya-badana.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\cati-kaplama.png",
+      "PackagePath": "staticwebassets\\img\\cati-kaplama.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\dogalgaz-tesisati.png",
+      "PackagePath": "staticwebassets\\img\\dogalgaz-tesisati.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\ev-temizligi.png",
+      "PackagePath": "staticwebassets\\img\\ev-temizligi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\evden-eve-nakliyat.png",
+      "PackagePath": "staticwebassets\\img\\evden-eve-nakliyat.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\hali-yikama.png",
+      "PackagePath": "staticwebassets\\img\\hali-yikama.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\klima-servisi.png",
+      "PackagePath": "staticwebassets\\img\\klima-servisi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\kombi-servisi.png",
+      "PackagePath": "staticwebassets\\img\\kombi-servisi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\parkeci.png",
+      "PackagePath": "staticwebassets\\img\\parkeci.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\su-tesisatcisi.png",
+      "PackagePath": "staticwebassets\\img\\su-tesisatcisi.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\tesisat.jpg",
+      "PackagePath": "staticwebassets\\img\\tesisat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\tv-tamiri.png",
+      "PackagePath": "staticwebassets\\img\\tv-tamiri.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\video-back.webp",
+      "PackagePath": "staticwebassets\\img\\video-back.webp"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ustayardım.props",
+      "PackagePath": "build\\ustayardım.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ustayardım.props",
+      "PackagePath": "buildMultiTargeting\\ustayardım.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ustayardım.props",
+      "PackagePath": "buildTransitive\\ustayardım.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ustayardım.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
