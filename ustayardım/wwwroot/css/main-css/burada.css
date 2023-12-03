@@ -3780,7 +3780,19 @@ button[data-scroll] > *,
 button[data-unlock-call] > * {
   pointer-events: none;
 }
-.btn,
+.btn{
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  align-items: center;
+  background-color: #dee2e6;
+  border-radius: 9999px;
+  color: rgb(4 11 48 / var(--tw-text-opacity));
+  display: flex;
+  font-weight: 500;
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .btn-border,
 .btn-border-dark,
 .btn-border-grey,

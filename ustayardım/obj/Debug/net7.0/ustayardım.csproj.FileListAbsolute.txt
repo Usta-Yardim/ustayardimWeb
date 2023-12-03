@@ -28,3 +28,4 @@ C:\Users\sefad\source\repos\ustayardım\ustayardım\obj\Debug\net7.0\refint\usta
 C:\Users\sefad\source\repos\ustayardım\ustayardım\obj\Debug\net7.0\ustayardım.pdb
 C:\Users\sefad\source\repos\ustayardım\ustayardım\obj\Debug\net7.0\ustayardım.genruntimeconfig.cache
 C:\Users\sefad\source\repos\ustayardım\ustayardım\obj\Debug\net7.0\ref\ustayardım.dll
+C:\Users\sefad\source\repos\ustayardım\ustayardım\obj\Debug\net7.0\ustayardım.sourcelink.json

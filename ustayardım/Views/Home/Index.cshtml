@@ -11,6 +11,10 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/main-css/header.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons-2.1.4/css/boxicons.min.css"/>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="css/main-css/styles.css"/>
     <link rel="stylesheet" href="css/main-css/burada.css">
     <link rel="stylesheet" href="css/main-css/icon.css">
@@ -19,18 +23,37 @@
   </head>
   <body>
     <header class="header">
-      <nav>
-        <div class="nav__logo"><a href="#">Usta Yardım</a></div>
-        <ul class="nav__links">
-          <li class="link"><a href="#anasayfa">Anasayfa</a></li>
-          <li class="link"><a href="#kategoriler">Kategoriler</a></li>
-          <li class="link"><a href="#nasil-calisir">Nasıl Çalışır?</a></li>
-          <li class="link"><a href="#usta-rehberi">Usta Rehberi</a></li>
-          <li class="link"><a href="/Login">Usta Girişi</a></li>
-          <li class="link"><a href="/Login">Müşteri Girişi</a></li>
-        </ul>
-      </nav>
-      <div class="section__container header__container" id="home">
+      <div style="display: flex;">
+        <a href="#"><img class="logo-img" src="assets/logo.png" href="#"></a>
+        <a href="#" class="logo-head">Usta Yardım</a>
+      </div>
+        
+        
+        <input type="checkbox"  id="check">
+
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar-h">
+          <a class="nav-link" href="#anasayfa" style="--i:0;">Anasayfa</a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kategoriler
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Filter 1</a></li>
+              <li><a class="dropdown-item" href="#">Filter 2</a></li>
+              <li><a class="dropdown-item" href="#">Filter 3</a></li>
+            </ul>
+          </div>
+              <a class="nav-link" href="#nasil-calisir" style="--i:2;">Nasıl Çalışır?</a>
+              <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
+              <a class="nav-link" href="/Login" style="--i:4;"><button class="btn">Usta Girişi</button></a>
+              <a class="nav-link" href="/Login" style="--i:5;"><button class="btn">Müşteri Girişi</button></a>
+        </nav>
+    </header>
+            <div class="section__container header__container" id="home">
         <section id="homeSearch">
             <div class="top">
               <h1>Her işin ustası burada!</h1>
@@ -44,9 +67,8 @@
             </div>
           </div>
         </section>
-
       </div>
-    </header>
+
     <section class="section__container trending__container" id="trending">
       <div class="section__header">
         <h2 class="section__title">Popüler Hizmetler 2023</h2>
@@ -238,7 +260,7 @@
       <div class="section__container tour__container">
         <h4>İşinin Ustaları Burada!</h4>
         <div class="video__container">
-          <video src="assets/video.mp4" autoplay loop muted></video>
+          <video src="assets/video-1.mp4" autoplay loop muted></video>
         </div>
       </div>
     </section>
@@ -1432,7 +1454,7 @@
         <h4>Güncellemelerden haberdar olmak için abone olun.</h4>
         <form action="/">
           <input type="text" placeholder="Lütfen e-posta adresinizi girin." />
-          <button class="btn">Abone Ol</button>
+          <button class="btn-aboneOl">Abone Ol</button>
         </form>
       </div>
     </section>

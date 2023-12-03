@@ -238,6 +238,24 @@ button {
   background-color: var(--primary-color-dark);
 }
 
+.btn-aboneOl{
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: center;
+  box-sizing: border-box;
+}
+.btn-aboneOl:hover {
+  background-color: var(--primary-color-dark);
+}
+
 .badge {
   position: absolute;
   top: 1rem;
@@ -270,7 +288,7 @@ body {
 }
 
 .header {
-  background-image: url("../../assets/ustalik-1.jpg");
+  background-image: url("../../assets/boya.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -306,12 +324,23 @@ nav {
   color: var(--white);
 }
 
-.link a:hover {
+.navbar-h a:hover {
   color: var(--primary-color);
 }
 
 .header__container {
-  padding: 5rem 1rem 10rem;
+  padding: 5rem 1rem 13rem;
+  max-width: none;
+  background-image: url("../../assets/boya.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1919px) {
+  .header__container {
+    padding: 1rem 1rem 10rem;
+  }
+  
 }
 
 .header__container h1 {
@@ -580,6 +609,7 @@ nav {
 
 .tour {
   margin-bottom: 2rem;
+  padding: 8rem;
   background-image: url("../../img/video-back.webp");
   background-position: center center;
   background-size: cover;
@@ -806,6 +836,8 @@ nav {
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  gap: inherit;
 }
 
 .subscribe__container input {
