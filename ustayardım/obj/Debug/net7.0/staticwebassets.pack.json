@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\assets\\elektrikeng.jpg"
     },
     {
+      "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\matkap.jpg",
       "PackagePath": "staticwebassets\\assets\\matkap.jpg"
     },

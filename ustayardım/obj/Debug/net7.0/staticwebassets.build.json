@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "avySGQWVInUQzHf/AHQMcAroda14IZ8llq/UxCRAMuM=",
+  "Hash": "AkF7zDq+SmdtvwwLuzHP7+XTtHdVDXAlbjYzx5IbYtQ=",
   "Source": "ustayardım",
   "BasePath": "_content/ustayardım",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\elektrikeng.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\logo.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "assets/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\logo.png"
     },
     {
       "Identity": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\wwwroot\\assets\\matkap.jpg",

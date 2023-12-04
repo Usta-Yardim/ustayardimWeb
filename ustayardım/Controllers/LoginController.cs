@@ -7,15 +7,15 @@ namespace ustayardım.Controllers
     public class LoginController : Controller
     {
 
-        public IActionResult Index()
+        public IActionResult Musteri()
         {
-            return View("Login");
+            return View("LoginMusteri");
         }
 
 
-        public IActionResult Login()
+        public IActionResult Usta()
         {
-            return View("Login");
+            return View("LoginUsta");
         }
     }
 }
