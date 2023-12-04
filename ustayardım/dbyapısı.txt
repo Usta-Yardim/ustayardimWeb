@@ -1,0 +1,43 @@
+User_Table
+
+user_id
+user_name
+user_surname
+Eposta
+şifre
+il_id (Sehirler tablosuna referans)
+kayıt_tarihi
+Usta_Table
+
+usta_id (User_Table'a referans)
+puanı
+hakkında
+tamamlana_is
+Musteri_Table
+
+musteri_id (User_Table'a referans)
+favori_usta_id (Usta_Table'a referans)
+Sehirler
+
+sehir_id
+il
+ilçe
+Kategoriler
+
+kategori_id
+kategori_name
+Galeri_Table
+
+galeri_id
+usta_id (Usta_Table'a referans)
+galeri_detayları
+Değerlendirme_Table
+
+degerlendirme_id
+usta_id (Usta_Table'a referans)
+degerlendirme_detayları
+Yorumlar_Table
+
+yorum_id
+usta_id (Usta_Table'a referans)
+yorum_detayları
