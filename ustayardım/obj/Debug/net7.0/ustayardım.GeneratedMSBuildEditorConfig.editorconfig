@@ -9,51 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ustayardım
 build_property.RootNamespace = ustayardım
-build_property.ProjectDir = C:\Users\sefad\source\repos\ustayardım\ustayardım\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\sefad\OneDrive\Masaüstü\Repo\repos\ustayardım\ustayardım\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sefad\source\repos\ustayardım\ustayardım
+build_property.MSBuildProjectDirectory = C:\Users\sefad\OneDrive\Masaüstü\Repo\repos\ustayardım\ustayardım
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Home/Index-1.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Account/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Auth/LoginUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpblVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Home/Index-1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC0xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Home/Index.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Home/Privacy.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Login/LoginMusteri.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5NdXN0ZXJpLmNzaHRtbA==
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/MusteriPage/musteriPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzdGVyaVBhZ2VcbXVzdGVyaVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Login/LoginUsta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5Vc3RhLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Shared/Error.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/_ViewImports.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/UstaPage/ustaPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN0YVBhZ2VcdXN0YVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/_ViewStart.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sefad/source/repos/ustayardım/ustayardım/Views/Shared/_Layout.cshtml]
+[C:/Users/sefad/OneDrive/Masaüstü/Repo/repos/ustayardım/ustayardım/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-av1l12zqjm

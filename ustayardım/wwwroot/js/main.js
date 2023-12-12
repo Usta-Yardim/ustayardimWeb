@@ -43,3 +43,6 @@ ScrollReveal().reveal(".client__card", {
   ...scrollRevealOption,
   interval: 500,
 });
+
+// Document üzerine tıklama olayını dinle
+

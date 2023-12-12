@@ -10,8 +10,9 @@ namespace ustayardım.Data
     {
         [Key]
         public int UserId { get; set; }
-        public string? UserName { get; set; }
-        public string? UserSurname { get; set; }
+        public string? FullName { get; set; }
+        public string? PhoneNumber { get; set; }
+        [Key]
         public string? Eposta { get; set; }
         public string? Sifre { get; set; }
         public int IlId { get; set; } // Sehir tablosuna referans
