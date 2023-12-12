@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XsX4jQBK4WWLVvtogVBHcpjRZ38/h3W3lFQLNide72NfLNMwSbxz0rdKSPiwwxzW8LvuvGkucha4j1ZwR6gcJA==",
+  "dgSpecHash": "NkpNveyHIETYxrw0mmsU0nBwj0m4GYtzHB9X5ekCFB0PShwoXOX38bYmmoCNn8B/PFZcBk4pfPNAGbJK5pERNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sefad\\source\\repos\\ustayardım\\ustayardım\\ustayardım.csproj",
+  "projectFilePath": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\ustayardım.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sefad\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sefad\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.8\\microsoft.data.sqlite.core.7.0.8.nupkg.sha512",
