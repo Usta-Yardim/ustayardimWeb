@@ -27,7 +27,16 @@
   padding-top: 9rem;
   position: relative;
 }
-
+@media (min-width: 1024px) {
+  #homeSearch{
+    margin-right: 125px;
+  }
+}
+@media (min-width: 1920px) {
+  #homeSearch{
+    margin-right: 70px;
+  }
+}
 
 
 #homeSearch .top {
