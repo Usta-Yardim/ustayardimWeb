@@ -1,4 +1,4 @@
-
+@model AccountModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hesap Ayarları</title>
+    <link rel="stylesheet" href="/css/main-css/header.css"/>
+    <link rel="stylesheet" href="/css/boxicons-2.1.4/css/boxicons.min.css"/>
     <link rel="stylesheet" href="/css/account.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/css/main-css/styles.css"/>
+    <link rel="stylesheet" href="/css/main-css/burada.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main-css/icon.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/main-css/bootstrap@4.5.0.css">
 </head>
 
 <body>
+        <header class="header">
+      <div style="display: flex;"> @* Şimdilik usta pgae anasayfasına gönderdik type göre değişecek*@
+        <a asp-controller="UstaPage" asp-action="ustaPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
+        <a asp-controller="UstaPage" asp-action="ustaPage" class="logo-head">Usta Yardım</a>
+      </div>
+        
+        
+        <input type="checkbox"  id="check">
+
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar-h">
+          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" style="--i:0;">Anasayfa</a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kategoriler
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Çilingir</a></li>
+              <li><a class="dropdown-item" href="#">Boya ve Badana</a></li>
+              <li><a class="dropdown-item" href="#">Su Tesisatı</a></li>
+              <li><a class="dropdown-item" href="#">Elektrik ve Elektronik</a></li>
+              <li><a class="dropdown-item" href="#">Mobilya ve Marangoz</a></li>
+              <li><a class="dropdown-item" href="#">Isıtma, Soğutma ve Havalandırma</a></li>
+              <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
+            </ul>
+          </div>
+              <a class="nav-link" href="#nasil-calisir" style="--i:2;">Nasıl Çalışır?</a>
+              <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
+              <!-- <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
+              <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a> -->
+              <img src="/images/user.png" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
+              <h2 onclick="toggleMenu()">Sefa demirci</h2>
+              <div class="sub-menu-wrap" id="sub-menu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/images/user.png" alt="">
+                        <h3>Ebubekir Alp Elvan</h3>
+                    </div>
+                    <hr>
+
+                    <a asp-controller="Account" asp-action="Account" class="sub-menu-link">
+                        <img src="/images/profile.png">
+                        <p>Profili Düzenle</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/setting.png">
+                        <p>Ayarlar</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/help.png">
+                        <p>Yardım ve Destek</p>
+                        <span>></span>
+                    </a>
+                    <a asp-controller="Home" asp-action="Index" class="sub-menu-link">
+                        <img src="/images/logout.png">
+                        <p>Çıkış Yap</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="container light-style flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-4">
             Hesap Ayarları
@@ -24,240 +99,317 @@
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-change-password">Şifre Değişikliği</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-info">Bilgi</a>
+                            href="#account-info">Kişisel Bilgiler</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-social-links">Sosyal Medya</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-connections">Bağlantılar</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-notifications">Bildirimler</a>
+                            href="#account-galeri">Galeri</a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content">
+                    <form asp-controller="Account" asp-action="AccountGeneral" method="post">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt
-                                    class="d-block ui-w-80">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="d-block ui-w-80" id="imageAvatar"> <!-- kullanıcın profil resmini çek -->
                                 <div class="media-body ml-4">
                                     <label class="btn btn-outline-primary">
-                                        Upload new photo
-                                        <input type="file" class="account-settings-fileinput">
+                                        Yeni fotoğraf yükle
+                                        <input type="file" class="account-settings-fileinput" accept="image/*" onchange="previewImageAvatar(this, 'imageAvatar')" >
                                     </label> &nbsp;
-                                    <button type="button" class="btn btn-default md-btn-flat">Reset</button>
                                     <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
                                 </div>
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="form-label">Username</label>
-                                    <input type="text" class="form-control mb-1" value="nmaxwell">
+                                    <label asp-for="FullName" class="form-label">İsim Soyisim</label>
+                                    <input asp-for="FullName" type="text" class="form-control mb-1" value="Test user1">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" value="Nelle Maxwell">
+                                    <label asp-for="PhoneNumber" class="form-label">Telefon</label>
+                                    <input asp-for="PhoneNumber" type="text" class="form-control" value="+90123456789">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">E-mail</label>
-                                    <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
-                                    <div class="alert alert-warning mt-3">
-                                        Your email is not confirmed. Please check your inbox.<br>
-                                        <a href="javascript:void(0)">Resend confirmation</a>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Company</label>
-                                    <input type="text" class="form-control" value="Company Ltd.">
+                                    <label asp-for="Email" class="form-label">E-mail</label>
+                                    <input asp-for="Email" type="text" class="form-control mb-1" value="info@test.com" disabled>
                                 </div>
                             </div>
+                            <div class="text-right mt-3">
+                                <button type="submit" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp; 
+                            </div>
                         </div>
+                    </form>
+                    <form asp-controller="Account" asp-action="AccountChangePassword" method="post">
                         <div class="tab-pane fade" id="account-change-password">
                             <div class="card-body pb-2">
                                 <div class="form-group">
-                                    <label class="form-label">Current password</label>
+                                    <label class="form-label">Mevcut Şifre</label>
                                     <input type="password" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">New password</label>
+                                    <label class="form-label">Yeni Şifre</label>
                                     <input type="password" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Repeat new password</label>
+                                    <label class="form-label">Yeni şifreyi tekrar girin</label>
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
+                            <div class="text-right mt-3">
+                                <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
+                            </div>
                         </div>
+                    </form>
+                    <form asp-controller="Account" asp-action="AccountInfo" method="post">
                         <div class="tab-pane fade" id="account-info">
                             <div class="card-body pb-2">
                                 <div class="form-group">
-                                    <label class="form-label">Bio</label>
+                                    <label class="form-label">Hakkında</label>
                                     <textarea class="form-control"
                                         rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Birthday</label>
-                                    <input type="text" class="form-control" value="May 3, 1995">
+                                    <label class="form-label" for="birthday">Doğum günü</label>
+                                    <input type="text" class="form-control" id="birthday">
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Konum Bilgileri</h6>
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Il">İl</label>
+                                    <select class="form-select" asp-for="Il" id="il">
+                                        <option value="" selected>Lütfen İlinizi Seçiniz</option>
+                                        <!-- Diğer şehirlerin listesi -->
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Country</label>
-                                    <select class="custom-select">
-                                        <option>USA</option>
-                                        <option selected>Canada</option>
-                                        <option>UK</option>
-                                        <option>Germany</option>
-                                        <option>France</option>
+                                    <label class="form-label" asp-for="Ilce">İlçe</label>
+                                    <select class="form-select" asp-for="Ilce" id="ilce">
+                                        <option value="" selected>Lütfen İlçenizi Seçiniz</option>
+                                        <!-- İlçeler burada JavaScript kullanılarak doldurulacak -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Mahalle">Mahalle</label>
+                                    <select class="form-select" asp-for="Mahalle" id="mahalle">
+                                        <option value="" selected>Lütfen Mahallenizi Seçiniz</option>
+                                        <!-- Mahalleler burada JavaScript kullanılarak doldurulacak -->
                                     </select>
                                 </div>
                             </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Contacts</h6>
-                                <div class="form-group">
-                                    <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control" value="+0 (123) 456 7891">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Website</label>
-                                    <input type="text" class="form-control" value>
-                                </div>
+                            <div class="text-right mt-3">
+                                <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="account-social-links">
+                    </form>
+                    <form asp-controller="Account" asp-action="AccountGaleri" method="post">
+                        <div class="tab-pane fade" id="account-galeri">
                             <div class="card-body pb-2">
-                                <div class="form-group">
-                                    <label class="form-label">Twitter</label>
-                                    <input type="text" class="form-control" value="https://twitter.com/user">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Facebook</label>
-                                    <input type="text" class="form-control" value="https://www.facebook.com/user">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Google+</label>
-                                    <input type="text" class="form-control" value>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">LinkedIn</label>
-                                    <input type="text" class="form-control" value>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Instagram</label>
-                                    <input type="text" class="form-control" value="https://www.instagram.com/user">
+                                <h6 class="mb-4">Referans Resimler</h6>
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col mb-3">
+                                            <img src="/images/image-add1-240.png" class="rounded-1 gallery" id="imagePreview1">
+                                            <i class='bx bxs-trash' onclick="resetImage('inputImg1', 'imagePreview1','undoIcon1')" id="undoIcon1"></i>
+                                            <input type="file" class="inputFile-gallery" accept="image/*" id="inputImg1" onchange="previewImage(this, 'imagePreview1','undoIcon1')">
+                                        </div>
+                                        <div class="col mb-3">
+                                            <img src="/images/image-add1-240.png" class="rounded-1 gallery" id="imagePreview2">
+                                            <i class='bx bxs-trash' onclick="resetImage('inputImg2', 'imagePreview2','undoIcon2')" id="undoIcon2"></i>
+                                            <input type="file" class="inputFile-gallery" accept="image/*" id="inputImg2" onchange="previewImage(this, 'imagePreview2','undoIcon2')">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mb-3">
+                                            <img src="/images/image-add1-240.png" class="rounded-1 gallery" id="imagePreview3">
+                                            <i class='bx bxs-trash' onclick="resetImage('inputImg3', 'imagePreview3','undoIcon3')" id="undoIcon3"></i>
+                                            <input type="file" class="inputFile-gallery" accept="image/*" id="inputImg3" onchange="previewImage(this, 'imagePreview3','undoIcon3')">
+                                        </div>
+                                        <div class="col mb-3">
+                                            <img src="/images/image-add1-240.png" class="rounded-1 gallery" id="imagePreview4">
+                                            <i class='bx bxs-trash' onclick="resetImage('inputImg4', 'imagePreview4','undoIcon4')" id="undoIcon4"></i>
+                                            <input type="file" class="inputFile-gallery" accept="image/*" id="inputImg4" onchange="previewImage(this, 'imagePreview4','undoIcon4')">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                                <div class="text-right mt-3">
+                                    <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
+                                </div>
                         </div>
-                        <div class="tab-pane fade" id="account-connections">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-twitter">Connect to
-                                    <strong>Twitter</strong></button>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <h5 class="mb-2">
-                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i
-                                            class="ion ion-md-close"></i> Remove</a>
-                                    <i class="ion ion-logo-google text-google"></i>
-                                    You are connected to Google:
-                                </h5>
-                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                    data-cfemail="f9979498818e9c9595b994989095d79a9694">[email&#160;protected]</a>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-facebook">Connect to
-                                    <strong>Facebook</strong></button>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-instagram">Connect to
-                                    <strong>Instagram</strong></button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="account-notifications">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Activity</h6>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone comments on my article</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone answers on my forum
-                                            thread</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone follows me</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Application</h6>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">News and announcements</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly product updates</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly blog digest</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-right mt-3">
-            <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;
-            <button type="button" class="btn btn-default">İptal Et</button>
-        </div>
-    </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
 
+    <!-- jQuery ve jQuery UI CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+    <!-- Datepicker CSS ve JS dosyaları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    
+    <!-- jQuery UI Dil Dosyası -->
+    <script src="/js/date-picker-tr.js"></script>
+
+    <script> // profil resmi için
+        function previewImageAvatar(input, imgId) {
+            const imgElement = document.getElementById(imgId);
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imgElement.src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+    }
+    </script>
+    <script> // Takvim için
+        //$.datepicker.setDefaults($.datepicker.regional['tr']); // Türkçe dil ayarı
+        // Sayfa yüklendiğinde datepicker'ı etkinleştir
+        $(document).ready(function(){
+            $('#birthday').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '01/01/1950', //Mindate
+                endDate: '+1m +1w',     //Maxdate
+                // Tarih formatı isteğe bağlı olarak değiştirilebilir
+                onSelect: function(dateText, inst) {
+                $(this).datepicker('hide');
+                }
+            });
+        });
+    </script>
+    <script> // sub menu için
+        let subMenu = document.getElementById("sub-menu");
+        let user_pic = document.getElementById("user-pic");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+1
+        // Klavyeden herhangi bir tuşa basılma olayını dinle
+        document.addEventListener('keydown', function(event) {
+        // Eğer herhangi bir tuşa basılır ve alt menü açıksa, alt menüyü kapat
+        if (subMenu.classList.contains('open-menu')) {
+            subMenu.classList.toggle('open-menu');
+        }
+        });
+
+        // Sayfa kaydırma olayını dinle
+        window.addEventListener('scroll', function() {
+        // Eğer sayfa kaydırılır ve alt menü açıksa, alt menüyü kapat
+        if (subMenu.classList.contains('open-menu')) {
+            subMenu.classList.toggle('open-menu');
+        }
+        });
+    </script>
+
+    <script> // Galeri için
+        function previewImage(input, imgId, iconId) {
+        const imgElement = document.getElementById(imgId);
+        const undoIcon = document.getElementById(iconId);
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                imgElement.src = e.target.result;
+                undoIcon.style.display = 'table';
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+        function resetImage(inpudId, imgId, iconId) {
+            const inputElement = document.getElementById(inpudId);
+            const undoIcon = document.getElementById(iconId);
+            const imgElement = document.getElementById(imgId);
+
+            inputElement.value = ''; // Değer sıfırlama
+
+            const defaultImageURL = '/images/image-add1-240.png'; // Varsayılan resmin URL'si
+            
+            imgElement.src = defaultImageURL;
+            undoIcon.style.display = 'none';
+        }
+    </script>
+
+    <script>  //iller
+        const ilURL = 'http://localhost:5120/api/Adress/Iller'; // Örnek API endpointi
+
+        fetch(ilURL)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            var ilDropdown = document.getElementById('il'); // İl combobox'ı
+            data.forEach(function(il) {
+            var option = document.createElement('option');
+            option.value = il.ilId;
+            option.textContent = il.ilAdi;
+            ilDropdown.appendChild(option);
+            });
+        })
+        .catch(function(error) {
+            console.error('Hata:', error);
+        });
+    </script>
+
+    <script> // ilçeler
+        document.getElementById('il').addEventListener('change', function() {
+        var selectedIlId = this.value; // Seçilen il değeri
+
+        // İl değiştikçe ilçeleri getiren bir AJAX isteği yapılabilir
+        fetch('http://localhost:5120/api/Adress/Ilceler/' + selectedIlId) // İlçeleri getiren API endpointi
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                var ilceDropdown = document.getElementById('ilce');
+                ilceDropdown.innerHTML = ''; // Önceki seçenekleri temizle
+
+            data.forEach(function(ilce) {
+                var option = document.createElement('option');
+                option.value = ilce.ilceId;
+                option.textContent = ilce.ilceAdi;
+                ilceDropdown.appendChild(option);
+            });
+            })
+            .catch(function(error) {
+                console.error('Hata:', error);
+            });
+        });
+    </script>
+
+    <script> // Mahalle Comboboxı için
+        document.getElementById('ilce').addEventListener('change', function() {
+        var selectedIlceId = this.value; // Seçilen ilçe değeri
+
+        // İlçe değiştikçe mahalleleri getiren bir AJAX isteği yapılabilir
+        fetch('http://localhost:5120/api/Adress/Mahalleler/' + selectedIlceId) // Mahalleleri getiren API endpointi
+            .then(function(response) {
+            return response.json();
+            })
+            .then(function(data) {
+            var mahalleDropdown = document.getElementById('mahalle');
+            mahalleDropdown.innerHTML = ''; // Önceki seçenekleri temizle
+
+            data.forEach(function(mahalle) {
+                var option = document.createElement('option');
+                option.value = mahalle.value;
+                option.textContent = mahalle.mahalleAdi;
+                mahalleDropdown.appendChild(option);
+            });
+            })
+            .catch(function(error) {
+            console.error('Hata:', error);
+            });
+        });
     </script>
 </body>
 

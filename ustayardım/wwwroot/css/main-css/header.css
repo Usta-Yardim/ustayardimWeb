@@ -55,6 +55,8 @@
 }
 a.logo-head:hover {
   color: #dc3545;
+  text-decoration: none;
+
 }
 .logo-img{
   width: 50px; 
@@ -177,4 +179,18 @@ a.logo-head:hover {
     transition-delay: calc(.15s * var(--i));
   }
 
+}
+
+.dropdown-item:active{
+  background-color: #adb5bd !important;
+}
+
+nav ul{
+  width: auto!important;
+}
+
+nav ul li{
+  display: list-item !important;
+  text-align: -webkit-match-parent !important;
+  margin: 0px 0px !important;
 }

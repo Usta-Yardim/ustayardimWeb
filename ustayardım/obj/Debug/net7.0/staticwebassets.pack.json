@@ -6785,6 +6785,10 @@
       "PackagePath": "staticwebassets\\css\\loginstyle.css"
     },
     {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\bootstrap@4.5.0.css",
+      "PackagePath": "staticwebassets\\css\\main-css\\bootstrap@4.5.0.css"
+    },
+    {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\burada.css",
       "PackagePath": "staticwebassets\\css\\main-css\\burada.css"
     },
@@ -6817,12 +6821,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",
+      "PackagePath": "staticwebassets\\images\\cloud-upload-240.png"
+    },
+    {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\help.png",
       "PackagePath": "staticwebassets\\images\\help.png"
     },
     {
-      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logo.png",
-      "PackagePath": "staticwebassets\\images\\logo.png"
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add-24.png",
+      "PackagePath": "staticwebassets\\images\\image-add-24.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add-240.png",
+      "PackagePath": "staticwebassets\\images\\image-add-240.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add1-240.png",
+      "PackagePath": "staticwebassets\\images\\image-add1-240.png"
     },
     {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logout.png",
@@ -6903,6 +6919,10 @@
     {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\img\\video-back.webp",
       "PackagePath": "staticwebassets\\img\\video-back.webp"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\date-picker-tr.js",
+      "PackagePath": "staticwebassets\\js\\date-picker-tr.js"
     },
     {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\main.js",

@@ -12,5 +12,6 @@ namespace ustayardım.Controllers
         {
             return View();
         }
+
     }
 }

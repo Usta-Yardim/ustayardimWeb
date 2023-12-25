@@ -25,27 +25,29 @@
   <body>
     <header class="header">
       <div style="display: flex;">
-        <a href="#"><img class="logo-img" src="/assets/logo.png" href="#"></a>
-        <a href="#" class="logo-head">Usta Yardım</a>
+        <a asp-controller="UstaPage" asp-action="ustaPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
+        <a asp-controller="UstaPage" asp-action="ustaPage" class="logo-head">Usta Yardım</a>
       </div>
-        
-        
+      
         <input type="checkbox"  id="check">
-
         <label for="check" class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-x' id="close-icon"></i>
         </label>
         <nav class="navbar-h">
-          <a class="nav-link" href="#anasayfa" style="--i:0;">Anasayfa</a>
+          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" style="--i:0;">Anasayfa</a>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kategoriler
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Filter 1</a></li>
-              <li><a class="dropdown-item" href="#">Filter 2</a></li>
-              <li><a class="dropdown-item" href="#">Filter 3</a></li>
+              <li><a class="dropdown-item" href="#">Çilingir</a></li>
+              <li><a class="dropdown-item" href="#">Boya ve Badana</a></li>
+              <li><a class="dropdown-item" href="#">Su Tesisatı</a></li>
+              <li><a class="dropdown-item" href="#">Elektrik ve Elektronik</a></li>
+              <li><a class="dropdown-item" href="#">Mobilya ve Marangoz</a></li>
+              <li><a class="dropdown-item" href="#">Isıtma, Soğutma ve Havalandırma</a></li>
+              <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
             </ul>
           </div>
               <a class="nav-link" href="#nasil-calisir" style="--i:2;">Nasıl Çalışır?</a>
@@ -58,28 +60,28 @@
                 <div class="sub-menu">
                     <div class="user-info">
                         <img src="/images/user.png" alt="">
-                        <h3>James Aldrino</h3>
+                        <h3>Sefa Demirci</h3>
                     </div>
                     <hr>
 
                     <a asp-controller="Account" asp-action="Account" class="sub-menu-link">
                         <img src="/images/profile.png">
-                        <p>Edit Profile</p>
+                        <p>Profili Düzenle</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
                         <img src="/images/setting.png">
-                        <p>Settings & Privacy</p>
+                        <p>Ayarlar</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
                         <img src="/images/help.png">
-                        <p>Help & Support</p>
+                        <p>Yardım ve Destek</p>
                         <span>></span>
                     </a>
-                    <a href="#" class="sub-menu-link">
+                    <a asp-controller="Home" asp-action="Index" class="sub-menu-link">
                         <img src="/images/logout.png">
-                        <p>Logout</p>
+                        <p>Çıkış Yap</p>
                         <span>></span>
                     </a>
                 </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3IsBXnux90nYQ7Pm3cLdPabi7Ash3HTM186WcaBq2dw=",
+  "Hash": "csLtYXeUFl+CUFGcvuarFFMQkBejHAZ7QXId8NCq2sA=",
   "Source": "ustayardım",
   "BasePath": "_content/ustayardım",
   "Mode": "Default",
@@ -28866,6 +28866,23 @@
       "OriginalItemSpec": "wwwroot\\css\\loginstyle.css"
     },
     {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\bootstrap@4.5.0.css",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "css/main-css/bootstrap@4.5.0.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\main-css\\bootstrap@4.5.0.css"
+    },
+    {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\css\\main-css\\burada.css",
       "SourceId": "ustayardım",
       "SourceType": "Discovered",
@@ -29002,6 +29019,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/cloud-upload-240.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cloud-upload-240.png"
+    },
+    {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\help.png",
       "SourceId": "ustayardım",
       "SourceType": "Discovered",
@@ -29019,12 +29053,12 @@
       "OriginalItemSpec": "wwwroot\\images\\help.png"
     },
     {
-      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logo.png",
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add-24.png",
       "SourceId": "ustayardım",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
       "BasePath": "_content/ustayardım",
-      "RelativePath": "images/logo.png",
+      "RelativePath": "images/image-add-24.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -29033,7 +29067,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+      "OriginalItemSpec": "wwwroot\\images\\image-add-24.png"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add-240.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/image-add-240.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\image-add-240.png"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add1-240.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/image-add1-240.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\image-add1-240.png"
     },
     {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logout.png",
@@ -29374,6 +29442,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\video-back.webp"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\date-picker-tr.js",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "js/date-picker-tr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\date-picker-tr.js"
     },
     {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\js\\main.js",

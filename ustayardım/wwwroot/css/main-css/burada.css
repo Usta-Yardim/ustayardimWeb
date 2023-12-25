@@ -3788,7 +3788,7 @@ button[data-unlock-call] > * {
   border-radius: 9999px;
   color: rgb(4 11 48 / var(--tw-text-opacity));
   display: flex;
-  font-weight: 500;
+  font-weight: 500 !important;
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
