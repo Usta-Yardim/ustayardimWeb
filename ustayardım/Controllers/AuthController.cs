@@ -108,7 +108,7 @@ namespace ustayardım.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var token = JsonSerializer.Deserialize<TokenResponseDTO>(apiResponse, new JsonSerializerOptions{PropertyNameCaseInsensitive = true});
-                
+               
                 if (token != null && !string.IsNullOrEmpty(token.Token))
                 {
                     // token kullanılabilir, null değil
@@ -116,17 +116,17 @@ namespace ustayardım.Controllers
                     var cookieOptions = new CookieOptions
                     {
                         HttpOnly = true,
-                        Expires = DateTimeOffset.Now.AddDays(30), // Örnek olarak 1 gün saklanması
+                        Expires = DateTimeOffset.Now.AddDays(30), // Örnek olarak 30 gün saklanması
                         SameSite = SameSiteMode.Strict,
                         Secure = true // HTTPS üzerinden çalıştığında aktifleştir
                     };
                     // Token'ı kullanarak gerekli işlemleri yapabilirsiniz
                     Response.Cookies.Append("AuthToken", token.Token, cookieOptions);
                     if(model.LoginModel.UserType == "usta"){
-                        return RedirectToAction("ustaPage","UstaPage");
+                        return RedirectToAction("ustaPage","UstaPage", new { id = token.UserId });
                     }
                     else{
-                        return RedirectToAction("musteriPage","MusteriPage");
+                        return RedirectToAction("musteriPage","MusteriPage",new { id = token.UserId});
                     }
                     
                 }

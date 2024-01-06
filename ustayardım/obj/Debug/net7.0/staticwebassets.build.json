@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "csLtYXeUFl+CUFGcvuarFFMQkBejHAZ7QXId8NCq2sA=",
+  "Hash": "ANvlAGc/1fBXrDeSLIEoQcEAbfNw2vAJX9AuJxD4ozY=",
   "Source": "ustayardım",
   "BasePath": "_content/ustayardım",
   "Mode": "Default",
@@ -29017,6 +29017,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\bookmark-plus-solid-60.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/bookmark-plus-solid-60.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookmark-plus-solid-60.png"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\bookmark.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/bookmark.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookmark.png"
     },
     {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",

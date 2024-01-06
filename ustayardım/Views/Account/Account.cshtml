@@ -22,7 +22,7 @@
         <header class="header">
       <div style="display: flex;"> @* Şimdilik usta pgae anasayfasına gönderdik type göre değişecek*@
         <a asp-controller="UstaPage" asp-action="ustaPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
-        <a asp-controller="UstaPage" asp-action="ustaPage" class="logo-head">Usta Yardım</a>
+        <a asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
       </div>
         
         
@@ -33,7 +33,7 @@
             <i class='bx bx-x' id="close-icon"></i>
         </label>
         <nav class="navbar-h">
-          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" style="--i:0;">Anasayfa</a>
+          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" style="--i:0;">Anasayfa</a>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kategoriler
@@ -53,12 +53,12 @@
               <!-- <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
               <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a> -->
               <img src="/images/user.png" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
-              <h2 onclick="toggleMenu()">Sefa demirci</h2>
+              <h2 onclick="toggleMenu()">@Model.User.FullName</h2>
               <div class="sub-menu-wrap" id="sub-menu">
                 <div class="sub-menu">
                     <div class="user-info">
                         <img src="/images/user.png" alt="">
-                        <h3>Ebubekir Alp Elvan</h3>
+                        <h3>@Model.User.FullName</h3>
                     </div>
                     <hr>
 
@@ -68,8 +68,8 @@
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
-                        <img src="/images/setting.png">
-                        <p>Ayarlar</p>
+                        <img src="/images/bookmark.png">
+                        <p>Favori Ustalar</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
@@ -106,41 +106,40 @@
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content">
-                    <form asp-controller="Account" asp-action="AccountGeneral" method="post">
+                    <form asp-controller="Account" asp-action="Account" id="form" name="general" method="post">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="d-block ui-w-80" id="imageAvatar"> <!-- kullanıcın profil resmini çek -->
                                 <div class="media-body ml-4">
                                     <label class="btn btn-outline-primary">
                                         Yeni fotoğraf yükle
-                                        <input type="file" class="account-settings-fileinput" accept="image/*" onchange="previewImageAvatar(this, 'imageAvatar')" >
+                                        <input asp-for="ProfilImgPath" type="file" class="account-settings-fileinput" accept="image/*" onchange="previewImageAvatar(this, 'imageAvatar')" >
                                     </label> &nbsp;
-                                    <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                    <div class="text-light small mt-1">İzin verilen JPG, GIF veya PNG. Maksimum boyut 80</div>
                                 </div>
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
+                                 <input type="hidden" asp-for="UserId" value="@Model.UserId"/>
+                                 <input type="hidden" asp-for="@Model.User.UserType" value="@Model.User.UserType"/>
                                 <div class="form-group">
-                                    <label asp-for="FullName" class="form-label">İsim Soyisim</label>
-                                    <input asp-for="FullName" type="text" class="form-control mb-1" value="Test user1">
+                                    <label asp-for="@Model.User.FullName" class="form-label">İsim Soyisim</label>
+                                    <input asp-for="@Model.User.FullName" type="text" class="form-control mb-1" value="@Model.User.FullName">
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="PhoneNumber" class="form-label">Telefon</label>
-                                    <input asp-for="PhoneNumber" type="text" class="form-control" value="+90123456789">
+                                    <label asp-for="@Model.User.PhoneNumber" class="form-label">Telefon</label>
+                                    <input asp-for="@Model.User.PhoneNumber" type="text" class="form-control" value="@Model.User.PhoneNumber">
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Email" class="form-label">E-mail</label>
-                                    <input asp-for="Email" type="text" class="form-control mb-1" value="info@test.com" disabled>
+                                    <label asp-for="@Model.User.Email" class="form-label">E-mail</label>
+                                    <input asp-for="@Model.User.Email" type="text" class="form-control mb-1" value="@Model.User.Email" disabled>
+                                    <input asp-for="@Model.User.Email" type="hidden" class="form-control mb-1" value="@Model.User.Email">
                                 </div>
                             </div>
-                            <div class="text-right mt-3">
-                                <button type="submit" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp; 
-                            </div>
-                        </div>
-                    </form>
-                    <form asp-controller="Account" asp-action="AccountChangePassword" method="post">
-                        <div class="tab-pane fade" id="account-change-password">
+                        </div> 
+                        <div class="tab-pane fade" id="account-change-password" style="display: none;">
                             <div class="card-body pb-2">
+                                <input type="hidden" asp-for="User.Password" value="@Model.User.Password"/>
                                 <div class="form-group">
                                     <label class="form-label">Mevcut Şifre</label>
                                     <input type="password" class="form-control">
@@ -154,56 +153,49 @@
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
-                            <div class="text-right mt-3">
-                                <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
-                            </div>
                         </div>
-                    </form>
-                    <form asp-controller="Account" asp-action="AccountInfo" method="post">
-                        <div class="tab-pane fade" id="account-info">
+                        <div class="tab-pane fade" id="account-info" style="display: none;">
                             <div class="card-body pb-2">
                                 <div class="form-group">
-                                    <label class="form-label">Hakkında</label>
-                                    <textarea class="form-control"
-                                        rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                    <label class="form-label" asp-for="Hakkinda">Hakkında</label>
+                                    <textarea id="hakkinda" name="Hakkinda" placeholder="Lütfen kullanıcıların sizi tanımasına yardımcı olun!" class="form-control"
+                                        rows="5">@Model.Hakkinda</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="birthday">Doğum günü</label>
-                                    <input type="text" class="form-control" id="birthday">
+                                    <label class="form-label" asp-for="Birthday">Doğum günü</label>
+                                    <input type="datetime" asp-for="Birthday" asp-format="{0:yyyy-MM-dd}" class="form-control" id="birthday">
                                 </div>
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body pb-2">
                                 <h6 class="mb-4">Konum Bilgileri</h6>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Il">İl</label>
-                                    <select class="form-select" asp-for="Il" id="il">
+                                    <label class="form-label" asp-for="@Model.Il.IlId">İl</label>
+                                    <select class="form-select" asp-for="@Model.Il.IlId" id="il" onchange="getIlceler(this)" asp-items="ViewBag.IlListesi">
                                         <option value="" selected>Lütfen İlinizi Seçiniz</option>
                                         <!-- Diğer şehirlerin listesi -->
                                     </select>
+                                    <input type="hidden" asp-for="@Model.Il.IlAdi" id="ilAdiHiddenInput"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Ilce">İlçe</label>
-                                    <select class="form-select" asp-for="Ilce" id="ilce">
+                                    <label class="form-label" asp-for="@Model.Ilce.IlceId">İlçe</label>
+                                    <select class="form-select" asp-for="@Model.Ilce.IlceId" id="ilce" onchange="getMahalleler(this)" asp-items="ViewBag.IlceListesi">
                                         <option value="" selected>Lütfen İlçenizi Seçiniz</option>
                                         <!-- İlçeler burada JavaScript kullanılarak doldurulacak -->
                                     </select>
+                                    <input type="hidden" asp-for="@Model.Ilce.IlceAdi" id="ilceAdiHiddenInput"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="Mahalle">Mahalle</label>
-                                    <select class="form-select" asp-for="Mahalle" id="mahalle">
+                                    <label class="form-label" asp-for="@Model.Mahalle.MahalleId">Mahalle</label>
+                                    <select class="form-select" asp-for="@Model.Mahalle.MahalleId" id="mahalle" onchange="updateMahalleAdi(this)" asp-items="ViewBag.MahalleListesi">
                                         <option value="" selected>Lütfen Mahallenizi Seçiniz</option>
                                         <!-- Mahalleler burada JavaScript kullanılarak doldurulacak -->
                                     </select>
+                                    <input type="hidden" asp-for="@Model.Mahalle.MahalleAdi" id="MahalleAdiHiddenInput"/>
                                 </div>
                             </div>
-                            <div class="text-right mt-3">
-                                <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
-                            </div>
                         </div>
-                    </form>
-                    <form asp-controller="Account" asp-action="AccountGaleri" method="post">
-                        <div class="tab-pane fade" id="account-galeri">
+                        <div class="tab-pane fade" id="account-galeri" style="display: none;">
                             <div class="card-body pb-2">
                                 <h6 class="mb-4">Referans Resimler</h6>
                                 <div class="container text-center">
@@ -232,10 +224,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <div class="text-right mt-3">
-                                    <button type="button" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
-                                </div>
+                            </div> 
+                        </div>
+                         <div class="text-right mt-3">
+                            <button type="submit" class="btn btn-primary">Güncelle</button>&nbsp;&nbsp;
                         </div>
                     </form>
                     </div>
@@ -257,6 +249,27 @@
     <!-- jQuery UI Dil Dosyası -->
     <script src="/js/date-picker-tr.js"></script>
 
+    <script>  //menu-cardlar için
+                    // Sol menü öğelerini seçin
+            const menuItems = document.querySelectorAll('.list-group-item');
+
+            // Her bir menü öğesine tıklama olayı ekleme
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Tıklanan menü öğesinin href değerini alın
+                    const target = this.getAttribute('href');
+
+                    // Tüm kartları gizleyin
+                    document.querySelectorAll('.tab-pane').forEach(tab => {
+                        tab.style.display = 'none';
+                    });
+
+                    // Hedef kartı gösterin
+                    document.querySelector(target).style.display = 'block';
+                });
+            });
+
+    </script>
     <script> // profil resmi için
         function previewImageAvatar(input, imgId) {
             const imgElement = document.getElementById(imgId);
@@ -269,14 +282,15 @@
                 reader.readAsDataURL(input.files[0]);
             }
     }
+
     </script>
     <script> // Takvim için
         //$.datepicker.setDefaults($.datepicker.regional['tr']); // Türkçe dil ayarı
         // Sayfa yüklendiğinde datepicker'ı etkinleştir
         $(document).ready(function(){
             $('#birthday').datepicker({
-                format: 'dd/mm/yyyy',
-                startDate: '01/01/1950', //Mindate
+                format: 'dd-mm-yyyy',
+                startDate: '01-01-1950', //Mindate
                 endDate: '+1m +1w',     //Maxdate
                 // Tarih formatı isteğe bağlı olarak değiştirilebilir
                 onSelect: function(dateText, inst) {
@@ -339,54 +353,53 @@
         }
     </script>
 
-    <script>  //iller
-        const ilURL = 'http://localhost:5120/api/Adress/Iller'; // Örnek API endpointi
+    <script>
+        function getIlceler(select) {
+            ilId = select.value;
+            fetch(`http://localhost:5120/api/Adress/Ilceler/${ilId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Gelen ilçeleri dropdown içerisine ekle
+                    const ilceDropdown = document.getElementById("ilce");
+                    ilceDropdown.innerHTML = '<option value="" selected>Lütfen İlçenizi Seçiniz</option>';
+                    const mahalleDropdown = document.getElementById("mahalle");
+                    mahalleDropdown.innerHTML = '<option value="" selected>Lütfen Mahallenizi Seçiniz</option>';
+                    data.forEach(ilce => {
+                        ilceDropdown.innerHTML += `<option value="${ilce.ilceId}">${ilce.ilceAdi}</option>`;
+                    });
+                });
 
-        fetch(ilURL)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            var ilDropdown = document.getElementById('il'); // İl combobox'ı
-            data.forEach(function(il) {
-            var option = document.createElement('option');
-            option.value = il.ilId;
-            option.textContent = il.ilAdi;
-            ilDropdown.appendChild(option);
-            });
-        })
-        .catch(function(error) {
-            console.error('Hata:', error);
-        });
+                var selectedText = select.options[select.selectedIndex].text;
+                document.getElementById("ilAdiHiddenInput").value = selectedText;
+        }
+
+    </script>
+    <script>
+        function getMahalleler(select) {
+            var ilceId = select.value;
+            fetch(`http://localhost:5120/api/Adress/Mahalleler/${ilceId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Gelen mahalleleri dropdown içerisine ekle
+                    const mahalleDropdown = document.getElementById("mahalle");
+                    mahalleDropdown.innerHTML = '<option value="" selected>Lütfen Mahallenizi Seçiniz</option>';
+                    data.forEach(mahalle => {
+                        mahalleDropdown.innerHTML += `<option value="${mahalle.mahalleId}">${mahalle.mahalleAdi}</option>`;
+                    });
+                });
+
+            var selectedText = select.options[select.selectedIndex].text;
+            document.getElementById("ilceAdiHiddenInput").value = selectedText;
+        }
     </script>
 
-    <script> // ilçeler
-        document.getElementById('il').addEventListener('change', function() {
-        var selectedIlId = this.value; // Seçilen il değeri
-
-        // İl değiştikçe ilçeleri getiren bir AJAX isteği yapılabilir
-        fetch('http://localhost:5120/api/Adress/Ilceler/' + selectedIlId) // İlçeleri getiren API endpointi
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                var ilceDropdown = document.getElementById('ilce');
-                ilceDropdown.innerHTML = ''; // Önceki seçenekleri temizle
-
-            data.forEach(function(ilce) {
-                var option = document.createElement('option');
-                option.value = ilce.ilceId;
-                option.textContent = ilce.ilceAdi;
-                ilceDropdown.appendChild(option);
-            });
-            })
-            .catch(function(error) {
-                console.error('Hata:', error);
-            });
-        });
+    <script>
+        function updateMahalleAdi(select) {
+            var selectedText = select.options[select.selectedIndex].text;
+            document.getElementById("MahalleAdiHiddenInput").value = selectedText;
+        }
     </script>
-
-    <script> // Mahalle Comboboxı için
+    @* <script> // Mahalle Comboboxı için
         document.getElementById('ilce').addEventListener('change', function() {
         var selectedIlceId = this.value; // Seçilen ilçe değeri
 
@@ -397,11 +410,11 @@
             })
             .then(function(data) {
             var mahalleDropdown = document.getElementById('mahalle');
-            mahalleDropdown.innerHTML = ''; // Önceki seçenekleri temizle
+            //mahalleDropdown.innerHTML = ''; // Önceki seçenekleri temizle
 
             data.forEach(function(mahalle) {
                 var option = document.createElement('option');
-                option.value = mahalle.value;
+                option.value = mahalle.mahalleId;
                 option.textContent = mahalle.mahalleAdi;
                 mahalleDropdown.appendChild(option);
             });
@@ -409,7 +422,7 @@
             .catch(function(error) {
             console.error('Hata:', error);
             });
-        });
+        }); *@
     </script>
 </body>
 

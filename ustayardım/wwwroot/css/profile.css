@@ -30,6 +30,7 @@ nav{
     font-weight: 500;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     cursor: pointer;
+    margin-bottom: -0.1rem;
 }
 
 .navbar-h h2:hover{
@@ -84,6 +85,7 @@ nav ul li a{
 }
 .user-info h3{
     font-weight: 500;
+    font-size: inherit;
 }
 .user-info img{
     width: 60px;

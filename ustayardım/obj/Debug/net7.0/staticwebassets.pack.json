@@ -6821,6 +6821,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\bookmark-plus-solid-60.png",
+      "PackagePath": "staticwebassets\\images\\bookmark-plus-solid-60.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\bookmark.png",
+      "PackagePath": "staticwebassets\\images\\bookmark.png"
+    },
+    {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",
       "PackagePath": "staticwebassets\\images\\cloud-upload-240.png"
     },

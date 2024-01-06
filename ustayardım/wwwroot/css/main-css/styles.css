@@ -39,6 +39,7 @@
     padding-right: 0.5rem;
     position: relative;
     width: 700px;
+    margin-right: 75px;
 }
 
 #homeSearch h1 {
@@ -53,19 +54,25 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
 }
 
 @media (min-width: 1024px){
 #homeSearch h2 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    margin-top: -10px;
   }
+  #homeSearch .top {
+    margin-right: 130px;
+}
 }
 
 #homeSearch h2 {
     text-align: center;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    margin-top: -10px;
 }
 
 #homeSearch h2 b {

@@ -26,7 +26,7 @@
     <header class="header">
       <div style="display: flex;">
         <a asp-controller="MusteriPage" asp-action="musteriPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
-        <a asp-controller="MusteriPage" asp-action="musteriPage" class="logo-head">Usta Yardım</a>
+        <a asp-controller="MusteriPage" asp-action="musteriPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
       </div>
         
         
@@ -72,8 +72,8 @@
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
-                        <img src="/images/setting.png">
-                        <p>Ayarlar</p>
+                        <img src="/images/Bookmark.png">
+                        <p>Favori Ustalar</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
