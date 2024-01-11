@@ -48,7 +48,6 @@
     padding-right: 0.5rem;
     position: relative;
     width: 700px;
-    margin-right: 75px;
 }
 
 #homeSearch h1 {
@@ -72,9 +71,9 @@
     line-height: 1.75rem;
     margin-top: -10px;
   }
-  #homeSearch .top {
+  /* #homeSearch .top {
     margin-right: 130px;
-}
+} */
 }
 
 #homeSearch h2 {

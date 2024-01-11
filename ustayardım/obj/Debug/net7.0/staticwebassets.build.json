@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ANvlAGc/1fBXrDeSLIEoQcEAbfNw2vAJX9AuJxD4ozY=",
+  "Hash": "bq8JVdfFVhJMLgFE762YPMd8nK0AOrFARc/07CXwoTM=",
   "Source": "ustayardım",
   "BasePath": "_content/ustayardım",
   "Mode": "Default",
@@ -29053,6 +29053,23 @@
       "OriginalItemSpec": "wwwroot\\images\\bookmark.png"
     },
     {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\calendar-24.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/calendar-24.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\calendar-24.png"
+    },
+    {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",
       "SourceId": "ustayardım",
       "SourceType": "Discovered",
@@ -29136,6 +29153,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\image-add1-240.png"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logo.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logout.png",

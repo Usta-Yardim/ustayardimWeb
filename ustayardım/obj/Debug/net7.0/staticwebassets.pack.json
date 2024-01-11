@@ -6829,6 +6829,10 @@
       "PackagePath": "staticwebassets\\images\\bookmark.png"
     },
     {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\calendar-24.png",
+      "PackagePath": "staticwebassets\\images\\calendar-24.png"
+    },
+    {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\cloud-upload-240.png",
       "PackagePath": "staticwebassets\\images\\cloud-upload-240.png"
     },
@@ -6847,6 +6851,10 @@
     {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\image-add1-240.png",
       "PackagePath": "staticwebassets\\images\\image-add1-240.png"
+    },
+    {
+      "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
       "Id": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\logout.png",

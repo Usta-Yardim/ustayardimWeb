@@ -20,7 +20,6 @@ namespace ustayardım.Controllers
                 {
                     string responseData = await response.Content.ReadAsStringAsync();
                     Usta = JsonSerializer.Deserialize<AccountModel>(responseData);
-
                 }
             }
             return View(Usta);

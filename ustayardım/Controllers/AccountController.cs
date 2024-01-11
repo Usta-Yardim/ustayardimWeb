@@ -44,11 +44,35 @@ namespace ustayardım.Controllers
                 return BadRequest(); // Yanlış id ile gelen istekleri reddet
             }
 
+            using var formData = new MultipartFormDataContent();
+            using var httpClient = new HttpClient();
+            MemoryStream memoryStream = new MemoryStream();
+
+            updatedModel.ProfilImgBase64?.CopyToAsync(memoryStream);
+            byte[] bytes = memoryStream.ToArray();
+            updatedModel.ProfilImgPath = Convert.ToBase64String(bytes);
+            
+
+            updatedModel.ReferansImgPath = new List<string>();
+            if(updatedModel.ReferansImgBase64 != null){
+                for(int i = 0; i < updatedModel.ReferansImgBase64.Count; i++){
+                    using (MemoryStream memoryStreams = new MemoryStream())
+                    {
+                        
+                        await updatedModel.ReferansImgBase64[i].CopyToAsync(memoryStreams);
+                        memoryStreams.Seek(0, SeekOrigin.Begin);
+                        byte[] bytess = memoryStreams.ToArray();
+                        string base64String = Convert.ToBase64String(bytess);
+                        updatedModel.ReferansImgPath.Add(base64String);
+                    }
+                }
+            }
+            
+
             var json = JsonSerializer.Serialize(updatedModel);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            using var httpClient = new HttpClient();
 
-            using (var response = await httpClient.PutAsync($"http://localhost:5120/api/Account/{id}", data))
+            using (var response = await httpClient.PutAsync($"http://localhost:5120/api/Account/{id}",data))
             {
                 if (response.IsSuccessStatusCode)
                 {
