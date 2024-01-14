@@ -217,4 +217,32 @@ nav{
     background-color: #adb5bd !important;
 }
 
+.toast-body.error{
+    background-color: #dc3545;
+    color: #fff;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+}
 
+.toast-header.error{
+    color: #fff !important;
+    background-color: #dc3545 !important;
+}
+.toast-body.succes{
+    background-color: #198754;
+    color: #fff;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+}
+
+.toast-header.succes{
+    color: #fff !important;
+    background-color: #198754 !important;
+}
+
+
+
+/*
+.toast{
+    display: contents !important;
+}*/

@@ -13,11 +13,12 @@ namespace ustayardım.Models
         public int UserId { get; set; }
         [JsonPropertyName("user")]
         public UserDetails User { get; set; } = null!;
-        [JsonPropertyName("ilinfo")]
-        public IllerDTO? Il { get; set; }
         public List<IllerDTO>? IlListesi { get; set; }
         public List<IlcelerDTO>? IlceListesi { get; set; }
         public List<MahallelerDTO>? MahalleListesi { get; set; }
+        
+        [JsonPropertyName("ilinfo")]
+        public IllerDTO? Il { get; set; }
 
         [JsonPropertyName("ilceinfo")]
         public IlcelerDTO? Ilce { get; set; }
@@ -28,7 +29,7 @@ namespace ustayardım.Models
         public IFormFile ProfilImgBase64 { get; set; } = null!;
 
         [JsonPropertyName("profilImgPath")]
-        public string ProfilImgPath { get; set; } = null!;
+        public string? ProfilImgPath { get; set; }
         [JsonPropertyName("puan")]
         public int? Puan { get; set; }
         [JsonPropertyName("hakkinda")]
@@ -38,23 +39,36 @@ namespace ustayardım.Models
         [JsonPropertyName("tamamlananIs")]
         public string? TamamlananIs { get; set; }
         [JsonIgnore]
-        public List<IFormFile> ReferansImgBase64 { get; set; } = null!;
+        public List<IFormFile>? ReferansImgBase64 { get; set; } 
 
         [JsonPropertyName("referansImgPath")]
         public List<string>? ReferansImgPath { get; set; } = new List<string>();
         [JsonPropertyName("activeTabPane")]
         public string ActiveTabPane { get; set; } = "#account-general";
+        [Required(ErrorMessage = "Mevcut Şifre alanı boş bırakılamaz.")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Mevcut Şifre")]
         [JsonPropertyName("oldPassword")]
-        public string OldPassword { get; set; } = null!;
+        public string? OldPassword { get; set; }
+         [Required(ErrorMessage = "Yeni Şifre alanı boş bırakılamaz.")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Yeni Şifre")]
         [JsonPropertyName("newPassword")]
-        public string NewPassword { get; set; } = null!;
+        public string? NewPassword { get; set; }
+        [Required(ErrorMessage = "Yeni Şifreyi Tekrar Girin alanı boş bırakılamaz.")]
+        [Compare("NewPassword", ErrorMessage = "Girilen yeni şifreler uyuşmuyor.")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Yeni Şifreyi Tekrar Girin")]
+        public string? ConfirmNewPassword { get; set; }
+        public bool? error { get; set; }
+        public bool? succes { get; set; }
     }
 
     public class UserDetails
     {
         [JsonPropertyName("fullName")]
         public string FullName { get; set; } = null!;
-         [JsonPropertyName("userId")]
+        [JsonPropertyName("userId")]
         public int UserId { get; set; }
         [JsonPropertyName("email")]
         public string Email { get; set; } = null!;

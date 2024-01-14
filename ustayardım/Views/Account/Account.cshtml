@@ -123,6 +123,7 @@
                             <hr class="border-light m-0">
                             <div class="card-body">
                                  <input type="hidden" asp-for="UserId" value="@Model.UserId"/>
+                                 <input type="hidden" asp-for="@Model.User.UserId" value="@Model.User.UserId"/>
                                  <input type="hidden" asp-for="@Model.User.UserType" value="@Model.User.UserType"/>
                                 <div class="form-group">
                                     <label asp-for="@Model.User.FullName" class="form-label">İsim Soyisim</label>
@@ -144,14 +145,17 @@
                                 <div class="form-group">
                                     <label class="form-label">Mevcut Şifre</label>
                                     <input type="password" asp-for="@Model.OldPassword" class="form-control">
+                                    <span asp-validation-for="@Model.OldPassword" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Yeni Şifre</label>
                                     <input type="password" asp-for="@Model.NewPassword" class="form-control">
+                                    <span asp-validation-for="@Model.NewPassword" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Yeni şifreyi tekrar girin</label>
-                                    <input type="password" asp-for="@Model.NewPassword" class="form-control">
+                                    <input type="password" asp-for="@Model.ConfirmNewPassword" class="form-control">
+                                    <span asp-validation-for="@Model.ConfirmNewPassword" class="text-danger"></span>
                                 </div>
                             </div>
                         </div>
@@ -236,6 +240,34 @@
                         </div>
                     </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div aria-live="polite" aria-atomic="true" class="bg-body-secondary text-bg-primary position-fixed bottom-0 end-0 p-3">
+            <div class="toast-container">
+                <div class="toast error" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+                  <div class="toast-header error">
+                  <strong class="me-auto">Server error</strong>
+                  <small>Now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body error">
+                   Sunucu kaynaklı bir sorun var Güncelleme Yapılamadı.
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div aria-live="polite" aria-atomic="true" class="bg-body-secondary text-bg-primary position-fixed bottom-0 end-0 p-3">
+            <div class="toast-container">
+                <div class="toast succes" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+                  <div class="toast-header succes">
+                  <strong class="me-auto">Güncelleme Başaralı</strong>
+                  <small>Now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body succes">
+                   Yaptığınız değişiklikler başarıyla kaydedildi.
+                  </div>
                 </div>
             </div>
         </div>
@@ -413,7 +445,7 @@
     <script> // active tab pane gönderme ve response göre gösterme
         $('.list-group-item').on('click', function() {
             var clickedTab = $(this).attr('href');
-            console.log(clickedTab); // Burada tıklanan tab'ın href değerini alıyoruz
+             // Burada tıklanan tab'ın href değerini alıyoruz
             $('#activeTabInput').val(clickedTab);
         });
 
@@ -456,13 +488,37 @@
                 var index = 0
                 modelReferansImagePath.forEach(function (i) {
                 $('#undoIcon' + index.toString()).css('display', 'table');
-                console.log('#undoIcon' + index.toString());
-                console.log(i);
+               
                 index++;
                 });
             }
         });
 
+    </script>
+
+    <script>
+        var isError = "@Model.error".toLowerCase(); // Burada gerçek bir kontrol yapmalısınız
+        var isSucces = "@Model.succes".toLowerCase(); // Burada gerçek bir kontrol yapmalısınız
+
+        // Toast elementini seç
+        var toast_error = document.querySelector('.toast.error');
+        var toast_succes = document.querySelector('.toast.succes');
+        
+        console.log(isError);
+        // Hata durumunda .show sınıfını ekleyerek toast'ı görünür hale getir
+        if (isError == "true") {
+        toast_error.classList.add('show');
+        setTimeout(function () {
+        toast_error.classList.remove('show');
+            }, 5000);
+        }
+        if (isSucces == "true") {
+        toast_succes.classList.add('show');
+        setTimeout(function () {
+        toast_succes.classList.remove('show');
+            }, 5000);
+        }
+        
     </script>
 </body>
 

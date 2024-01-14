@@ -39,26 +39,34 @@ namespace ustayardım.Controllers
         [HttpPost("Account/{id}")]
         public async Task<IActionResult> Account(int id, AccountModel updatedModel)
         {
+            if(updatedModel.ActiveTabPane == "#account-change-password"){
+                if (!ModelState.IsValid){
+                var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                         .Select(e => e.ErrorMessage)
+                                         .ToList();
+                return View("Account", updatedModel);
+                }
+            }
+            
             if (id != updatedModel.UserId)
             {
                 return BadRequest(); // Yanlış id ile gelen istekleri reddet
             }
 
-            using var formData = new MultipartFormDataContent();
             using var httpClient = new HttpClient();
             MemoryStream memoryStream = new MemoryStream();
-
-            updatedModel.ProfilImgBase64?.CopyToAsync(memoryStream);
-            byte[] bytes = memoryStream.ToArray();
-            updatedModel.ProfilImgPath = Convert.ToBase64String(bytes);
             
-
+            if(updatedModel.ProfilImgBase64 != null){
+                updatedModel.ProfilImgBase64?.CopyToAsync(memoryStream);
+                byte[] bytes = memoryStream.ToArray();
+                updatedModel.ProfilImgPath = Convert.ToBase64String(bytes);
+            }
+            
             updatedModel.ReferansImgPath = new List<string>();
             if(updatedModel.ReferansImgBase64 != null){
                 for(int i = 0; i < updatedModel.ReferansImgBase64.Count; i++){
                     using (MemoryStream memoryStreams = new MemoryStream())
                     {
-                        
                         await updatedModel.ReferansImgBase64[i].CopyToAsync(memoryStreams);
                         memoryStreams.Seek(0, SeekOrigin.Begin);
                         byte[] bytess = memoryStreams.ToArray();
@@ -75,22 +83,23 @@ namespace ustayardım.Controllers
             using (var response = await httpClient.PutAsync($"http://localhost:5120/api/Account/{id}",data))
             {
                 if (response.IsSuccessStatusCode)
-                {
-                    var Usta = new AccountModel();
-                    string responseData = await response.Content.ReadAsStringAsync();
-                    Usta = JsonSerializer.Deserialize<AccountModel>(responseData);
-                    if (Usta != null){
-                        await GetAddressData(Usta);
-                    }
-                    return View(Usta); // Başarılıysa yönlendirme
+               {
+                    var Usta = await GetUsta(id);
+#pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
+                    Usta.succes = true;
+#pragma warning restore CS8602
+                    return View(Usta);      // Hata mesajıda göster kullanıcıya güncellenemedi diye ve güncellenen değerleri sıfırla dbdeki verriyi getir.
                 }
                 else
                 {
-                    return View(updatedModel); // Hata olursa yönlendirme
-                    
-                    // Hata mesajıda göster kullanıcıya güncellenemedi diye ve güncellenen değerleri sıfırla dbdeki verriyi getir.
+                    var Usta = await GetUsta(id);
+#pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
+                    Usta.error = true;
+#pragma warning restore CS8602
+                    return View(Usta);
                 }
             }
+            
             
         }
 
@@ -123,6 +132,22 @@ namespace ustayardım.Controllers
                 }
         
             }
+        }
+
+        public async Task<AccountModel?> GetUsta(int id){
+            using var httpClient = new HttpClient();
+            var Usta = new AccountModel();
+            using (var responsemodel = await httpClient.GetAsync($"http://localhost:5120/api/Account/Ustalar/{id}"))
+            {
+                string responseData = await responsemodel.Content.ReadAsStringAsync();
+                Usta = JsonSerializer.Deserialize<AccountModel>(responseData);
+
+            }
+            if(Usta != null){
+                await GetAddressData(Usta);
+            }
+            ModelState.Clear();                
+            return Usta;
         }
 
     }
