@@ -203,6 +203,10 @@ nav{
 }
 
 .navbar-h h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 17ch;
     margin-left: 10px !important;
     font-size: 1.15rem !important;
     color: #fff;
@@ -239,6 +243,7 @@ nav{
     color: #fff !important;
     background-color: #198754 !important;
 }
+
 
 
 

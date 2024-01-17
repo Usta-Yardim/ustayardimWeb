@@ -64,18 +64,4 @@ namespace ustayardım.Models
         public bool? succes { get; set; }
     }
 
-    public class UserDetails
-    {
-        [JsonPropertyName("fullName")]
-        public string FullName { get; set; } = null!;
-        [JsonPropertyName("userId")]
-        public int UserId { get; set; }
-        [JsonPropertyName("email")]
-        public string Email { get; set; } = null!;
-        [JsonPropertyName("phoneNumber")]
-        public string PhoneNumber { get; set; } = null!;
-        [JsonPropertyName("userType")]
-        public string UserType { get; set; } = null!;
-    
-    }
 }

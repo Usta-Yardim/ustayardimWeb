@@ -16,20 +16,23 @@ namespace ustayardım.Controllers
         public async Task<IActionResult> Account(int id)
         {
             
-            var Usta = new AccountModel();
+            var Usta = await GetUsta(id);
             
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync($"http://localhost:5120/api/Account/Ustalar/{id}"))
-                {
-                    string responseData = await response.Content.ReadAsStringAsync();
-                    Usta = JsonSerializer.Deserialize<AccountModel>(responseData);
-
-                }
-            }
             if(Usta != null){
                 await GetAddressData(Usta);
                 return View(Usta);
+            }
+
+            return View();
+            
+        }
+        [HttpGet("Musteri/{id}")]
+        public async Task<IActionResult> AccountMusteri(int id)
+        {
+            var Musteri = await GetMusteri(id);
+            if(Musteri != null){
+                await GetAddressData(Musteri);
+                return View(Musteri);
             }
 
             return View();
@@ -44,6 +47,7 @@ namespace ustayardım.Controllers
                 var errors = ModelState.Values.SelectMany(v => v.Errors)
                                          .Select(e => e.ErrorMessage)
                                          .ToList();
+                await GetAddressData(updatedModel);
                 return View("Account", updatedModel);
                 }
             }
@@ -62,6 +66,7 @@ namespace ustayardım.Controllers
                 updatedModel.ProfilImgPath = Convert.ToBase64String(bytes);
             }
             
+            
             updatedModel.ReferansImgPath = new List<string>();
             if(updatedModel.ReferansImgBase64 != null){
                 for(int i = 0; i < updatedModel.ReferansImgBase64.Count; i++){
@@ -76,7 +81,6 @@ namespace ustayardım.Controllers
                 }
             }
             
-
             var json = JsonSerializer.Serialize(updatedModel);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -99,56 +103,118 @@ namespace ustayardım.Controllers
                     return View(Usta);
                 }
             }
-            
-            
         }
 
-        public async Task GetAddressData(AccountModel Usta)
+        [HttpPost("Account/MusteriUpdate/{id}")]
+        public async Task<IActionResult> MusteriUpdate(int id, AccountModel updatedModel)
+        {
+            if(updatedModel.ActiveTabPane == "#account-change-password"){
+                if (!ModelState.IsValid){
+                var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                         .Select(e => e.ErrorMessage)
+                                         .ToList();
+                await GetAddressData(updatedModel);
+                return View("AccountMusteri", updatedModel);
+                }
+            }
+            
+            if (id != updatedModel.UserId)
+            {
+                return BadRequest(); // Yanlış id ile gelen istekleri reddet
+            }
+
+            using var httpClient = new HttpClient();
+            MemoryStream memoryStream = new MemoryStream();
+            
+            if(updatedModel.ProfilImgBase64 != null){
+                updatedModel.ProfilImgBase64?.CopyToAsync(memoryStream);
+                byte[] bytes = memoryStream.ToArray();
+                updatedModel.ProfilImgPath = Convert.ToBase64String(bytes);
+            }
+            
+            var json = JsonSerializer.Serialize(updatedModel);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using (var response = await httpClient.PutAsync($"http://localhost:5120/api/Account/MusteriUpdate/{id}",data))
+            {
+                if (response.IsSuccessStatusCode)
+               {
+                    var Musteri = await GetMusteri(id);
+#pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
+                    Musteri.succes = true;
+#pragma warning restore CS8602
+                    return View("AccountMusteri",Musteri);      // Hata mesajıda göster kullanıcıya güncellenemedi diye ve güncellenen değerleri sıfırla dbdeki verriyi getir.
+                }
+                else
+                {
+                    var Musteri = await GetMusteri(id);
+#pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
+                    Musteri.error = true;
+#pragma warning restore CS8602
+                    return View("AccountMusteri",Musteri);
+                }
+            }
+        }
+
+        public async Task GetAddressData(AccountModel Kullanıcı)
         {
             using var httpClient = new HttpClient();
 
             var responseIl = await httpClient.GetAsync($"http://localhost:5120/api/Adress/Iller");
             var responseDataIl = await responseIl.Content.ReadAsStringAsync();
 
-            if (Usta != null ){
-                Usta.IlListesi = JsonSerializer.Deserialize<List<IllerDTO>>(responseDataIl);
-                ViewBag.IlListesi = new SelectList(Usta.IlListesi,"IlId","IlAdi");
+            if (Kullanıcı != null ){
+                Kullanıcı.IlListesi = JsonSerializer.Deserialize<List<IllerDTO>>(responseDataIl);
+                ViewBag.IlListesi = new SelectList(Kullanıcı.IlListesi,"IlId","IlAdi");
 
 
-                if(Usta.Il != null){
-                    var ilId = Usta.Il.IlId;
+                if(Kullanıcı.Il != null){
+                    var ilId = Kullanıcı.Il.IlId;
                     var responseIlce = await httpClient.GetAsync($"http://localhost:5120/api/Adress/Ilceler/{ilId}");
                     var responseDataIlce = await responseIlce.Content.ReadAsStringAsync();
-                    Usta.IlceListesi = JsonSerializer.Deserialize<List<IlcelerDTO>>(responseDataIlce);
-                    ViewBag.IlceListesi = new SelectList(Usta.IlceListesi,"IlceId","IlceAdi");
+                    Kullanıcı.IlceListesi = JsonSerializer.Deserialize<List<IlcelerDTO>>(responseDataIlce);
+                    ViewBag.IlceListesi = new SelectList(Kullanıcı.IlceListesi,"IlceId","IlceAdi");
                 }
 
-                if(Usta.Ilce != null){
-                    var ilceId = Usta.Ilce.IlceId;
+                if(Kullanıcı.Ilce != null){
+                    var ilceId = Kullanıcı.Ilce.IlceId;
                     var responseMahalle = await httpClient.GetAsync($"http://localhost:5120/api/Adress/Mahalleler/{ilceId}");
                     var responseDataMahalle = await responseMahalle.Content.ReadAsStringAsync();
-                    Usta.MahalleListesi = JsonSerializer.Deserialize<List<MahallelerDTO>>(responseDataMahalle);
-                    ViewBag.MahalleListesi = new SelectList(Usta.MahalleListesi,"MahalleId","MahalleAdi");
+                    Kullanıcı.MahalleListesi = JsonSerializer.Deserialize<List<MahallelerDTO>>(responseDataMahalle);
+                    ViewBag.MahalleListesi = new SelectList(Kullanıcı.MahalleListesi,"MahalleId","MahalleAdi");
                 }
         
             }
         }
 
-        public async Task<AccountModel?> GetUsta(int id){
-            using var httpClient = new HttpClient();
-            var Usta = new AccountModel();
-            using (var responsemodel = await httpClient.GetAsync($"http://localhost:5120/api/Account/Ustalar/{id}"))
+        public async Task<AccountModel?> GetAccount(int id, string endpoint)
+        {
+            var account = new AccountModel();
+            
+            using (var httpClient = new HttpClient())
             {
-                string responseData = await responsemodel.Content.ReadAsStringAsync();
-                Usta = JsonSerializer.Deserialize<AccountModel>(responseData);
+                using (var response = await httpClient.GetAsync($"http://localhost:5120/api/Account/{endpoint}/{id}"))
+                {
+                    string responseData = await response.Content.ReadAsStringAsync();
+                    account = JsonSerializer.Deserialize<AccountModel>(responseData);
+                }
+            }
 
+            if (account != null)
+            {
+                await GetAddressData(account);
             }
-            if(Usta != null){
-                await GetAddressData(Usta);
-            }
-            ModelState.Clear();                
-            return Usta;
+
+            ModelState.Clear();
+            return account;
         }
-
+        public async Task<AccountModel?> GetUsta(int id)
+        {
+            return await GetAccount(id, "Ustalar");
+        }
+        public async Task<AccountModel?> GetMusteri(int id)
+        {
+            return await GetAccount(id, "Musteri");
+        }
     }
 }

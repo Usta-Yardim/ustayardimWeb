@@ -1,3 +1,5 @@
+@model AccountModel
+
 @{
   ViewData["Title"] = "Usta Yanında";
 }
@@ -19,13 +21,14 @@
     <link rel="stylesheet" href="/css/main-css/burada.css">
     <link rel="stylesheet" href="/css/main-css/icon.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>USTA Yardım</title>
   </head>
   <body>
     <header class="header">
       <div style="display: flex;">
-        <a asp-controller="MusteriPage" asp-action="musteriPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
+        <a asp-controller="MusteriPage" asp-action="musteriPage"><img class="logo-img" src="/assets/logo.png"></a>
         <a asp-controller="MusteriPage" asp-action="musteriPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
       </div>
         
@@ -56,17 +59,17 @@
               <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
               <!-- <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
               <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a> -->
-              <img src="/images/user.png" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
-              <h2 onclick="toggleMenu()">Sefa demirci</h2>
+              <img src="@Model.ProfilImgPath" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
+              <h2 onclick="toggleMenu()">@Model.User.FullName</h2>
               <div class="sub-menu-wrap" id="sub-menu">
                 <div class="sub-menu">
                     <div class="user-info">
-                        <img src="/images/user.png" alt="">
-                        <h3>Sefa Demirci</h3>
+                        <img src="@Model.ProfilImgPath" alt="">
+                        <h3>@Model.User.FullName</h3>
                     </div>
                     <hr>
 
-                    <a asp-controller="Account" asp-action="Account" class="sub-menu-link">
+                    <a asp-controller="Account" asp-action="AccountMusteri" asp-route-id="@Model.UserId" class="sub-menu-link">
                         <img src="/images/profile.png">
                         <p>Profili Düzenle</p>
                         <span>></span>
@@ -1564,6 +1567,23 @@
         if (subMenu.classList.contains('open-menu')) {
             subMenu.classList.toggle('open-menu');
         }
+        });
+    </script>
+
+            <script>
+        // Sayfa yüklendiğinde kontrolü yap
+        $(document).ready(function() {
+
+            var defaultImagePath = 'https://bootdey.com/img/Content/avatar/avatar1.png'; // Varsayılan profil resmi yolu
+
+            
+            var modelImagePath = "@Model.ProfilImgPath";  // Modelden gelen profil resminin yolu veya varsayılan yolu
+                    // Profil resmi kontrolü
+            if (!modelImagePath) {
+                $('#user-pic, #user-img').attr('src', defaultImagePath);
+            } else {
+                $('#user-pic, #user-img').attr('src', modelImagePath);
+            }
         });
     </script>
   </body>

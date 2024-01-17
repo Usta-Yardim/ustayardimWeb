@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/css/main-css/icon.css">
     <link rel="stylesheet" href="/css/profile.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <title>USTA Yardım</title>
   </head>
   <body>
@@ -56,12 +57,12 @@
               <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
               <!-- <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
               <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a> -->
-              <img src="/images/user.png" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
+              <img src="@Model.ProfilImgPath" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
               <h2 onclick="toggleMenu()">@Model.User.FullName</h2>
               <div class="sub-menu-wrap" id="sub-menu">
                 <div class="sub-menu">
                     <div class="user-info">
-                        <img src="/images/user.png" alt="">
+                        <img src="@Model.ProfilImgPath" alt="" id="user-img">
                         <h3>@Model.User.FullName</h3>
                     </div>
                     <hr>
@@ -1564,6 +1565,23 @@
         if (subMenu.classList.contains('open-menu')) {
             subMenu.classList.toggle('open-menu');
         }
+        });
+    </script>
+
+        <script>
+        // Sayfa yüklendiğinde kontrolü yap
+        $(document).ready(function() {
+
+            var defaultImagePath = 'https://bootdey.com/img/Content/avatar/avatar1.png'; // Varsayılan profil resmi yolu
+
+            
+            var modelImagePath = "@Model.ProfilImgPath";  // Modelden gelen profil resminin yolu veya varsayılan yolu
+                    // Profil resmi kontrolü
+            if (!modelImagePath) {
+                $('#user-pic, #user-img').attr('src', defaultImagePath);
+            } else {
+                $('#user-pic, #user-img').attr('src', modelImagePath);
+            }
         });
     </script>
   </body>

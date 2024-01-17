@@ -22,8 +22,8 @@
 <body>
         <header class="header">
       <div style="display: flex;"> @* Şimdilik usta pgae anasayfasına gönderdik type göre değişecek*@
-        <a asp-controller="UstaPage" asp-action="ustaPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
-        <a asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
+        <a asp-controller="MusteriPage" asp-action="musteriPage"><img class="logo-img" src="/assets/logo.png"></a>
+        <a asp-controller="MusteriPage" asp-action="musteriPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
       </div>
         
         
@@ -34,7 +34,7 @@
             <i class='bx bx-x' id="close-icon"></i>
         </label>
         <nav class="navbar-h">
-          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" style="--i:0;">Anasayfa</a>
+          <a class="nav-link" asp-controller="MusteriPage" asp-action="musteriPage" asp-route-id="@Model.UserId" style="--i:0;">Anasayfa</a>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kategoriler
@@ -63,7 +63,7 @@
                     </div>
                     <hr>
 
-                    <a asp-controller="Account" asp-action="Account" class="sub-menu-link">
+                    <a asp-controller="Account" asp-action="AccountMusteri" class="sub-menu-link">
                         <img src="/images/profile.png">
                         <p>Profili Düzenle</p>
                         <span>></span>
@@ -101,13 +101,11 @@
                             href="#account-change-password">Şifre Değişikliği</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-info">Kişisel Bilgiler</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-galeri">Galeri</a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content">
-                    <form asp-controller="Account" asp-action="Account" id="form" name="general" method="post" enctype="multipart/form-data">
+                    <form asp-controller="Account" asp-action="MusteriUpdate" asp-route-id="@Model.UserId" id="form" name="general" method="post" enctype="multipart/form-data">
                         <div class="tab-pane fade active" id="account-general">
                             <div class="card-body media align-items-center">
                                 <img src="@Model.ProfilImgPath" class="d-block ui-w-80" id="imageAvatar"> <!-- kullanıcın profil resmini çek -->
@@ -161,18 +159,6 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="account-info" style="display: none;">
-                            <div class="card-body pb-2">
-                                <div class="form-group">
-                                    <label class="form-label" asp-for="Hakkinda">Hakkında</label>
-                                    <textarea id="hakkinda" name="Hakkinda" placeholder="Lütfen kullanıcıların sizi tanımasına yardımcı olun!" class="form-control"
-                                        rows="5">@Model.Hakkinda</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" asp-for="Birthday">Doğum günü</label>
-                                    <i class='bx bxs-calendar' style='color:#8c8c8c; font-size:20px'  ></i>
-                                    <input type="text" asp-for="Birthday" asp-format="{0:dd.MM.yyyy}" class="form-control" id="birthday">
-                                </div>
-                            </div>
                             <hr class="border-light m-0">
                             <div class="card-body pb-2">
                                 <h6 class="mb-4">Konum Bilgileri</h6>
@@ -201,39 +187,6 @@
                                     <input type="hidden" asp-for="@Model.Mahalle.MahalleAdi" id="MahalleAdiHiddenInput"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="account-galeri" style="display: none;">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Referans Resimler</h6>
-                                <div class="container text-center">
-                                    @for(int j = 0; j < 2; j++){
-                                        int index = j*2;
-                                    <div class="row">
-                                        @for(int i = 0; i < 2; i++) {
-                                            @if(Model.ReferansImgPath != null && index < Model.ReferansImgPath.Count){
-                                                if(index < Model.ReferansImgPath.Count && !string.IsNullOrEmpty(Model.ReferansImgPath[index])) {
-                                                    <div class="col mb-3">
-                                                        <img src="@Model.ReferansImgPath[index]" class="rounded-1 gallery" id="imagePreview@(index)">
-                                                        <i class='bx bxs-trash' onclick="resetImage('inputImg@(index)', 'imagePreview@(index)','undoIcon@(index)')" id="undoIcon@(index)"></i>
-                                                        <input asp-for="@Model.ReferansImgBase64" type="file" class="inputFile-gallery" accept="image/*" id="inputImg@(index)" onchange="previewImage(this, 'imagePreview@(index)','undoIcon@(index)')">
-                                                        @* <input type="hidden" asp-for="@Model.ReferansImgPath[index]" value="@Model.ReferansImgPath[index]"/> *@
-                                                    </div>
-                                                }
-                                            } 
-                                            else {
-                                                <div class="col mb-3">
-                                                    <img src="/images/image-add1-240.png" class="rounded-1 gallery" id="imagePreview@(index)">
-                                                    <i class='bx bxs-trash' onclick="resetImage('inputImg@(index)', 'imagePreview@(index)','undoIcon@(index)')" id="undoIcon@(index)"></i>
-                                                    <input asp-for="@Model.ReferansImgBase64" type="file" class="inputFile-gallery" accept="image/*" id="inputImg@(index)" onchange="previewImage(this, 'imagePreview@(index)','undoIcon@(index)')">
-                                                    @* <input type="hidden" asp-for="@Model.ReferansImgPath" value="@Model.ReferansImgPath"/> *@
-                                                </div>
-                                            }
-                                            index += 1;
-                                        }
-                                    </div>
-                                    }
-                                </div>
-                            </div> 
                         </div>
                         <input type="hidden" asp-for="@Model.ActiveTabPane" id="activeTabInput"/>
                          <div class="text-right mt-3">

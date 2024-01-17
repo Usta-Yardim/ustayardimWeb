@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bq8JVdfFVhJMLgFE762YPMd8nK0AOrFARc/07CXwoTM=",
+  "Hash": "RuJAKimNsdL6iqNMXG/VY7OcFtcvBHmGKDISfRfTYNA=",
   "Source": "ustayardım",
   "BasePath": "_content/ustayardım",
   "Mode": "Default",
@@ -29002,6 +29002,40 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\favicon-16x16.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "favicon-16x16.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-16x16.png"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\favicon-32x32.png",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "favicon-32x32.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-32x32.png"
+    },
+    {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\favicon.ico",
       "SourceId": "ustayardım",
       "SourceType": "Discovered",
@@ -29017,6 +29051,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\favicon1.ico",
+      "SourceId": "ustayardım",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\",
+      "BasePath": "_content/ustayardım",
+      "RelativePath": "favicon1.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon1.ico"
     },
     {
       "Identity": "C:\\Users\\sefad\\OneDrive\\Masaüstü\\Repo\\repos\\ustayardım\\ustayardım\\wwwroot\\images\\bookmark-plus-solid-60.png",

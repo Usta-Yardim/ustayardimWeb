@@ -309,6 +309,12 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 1919px) {
+  nav {
+    max-width:fit-content !important;
+  }
+}
+
 nav {
   max-width: var(--max-width);
   margin: auto;
