@@ -316,7 +316,7 @@ body {
 }
 
 nav {
-  max-width: var(--max-width);
+  max-width: max-content;
   margin: auto;
   padding: 2rem 1rem;
   display: flex;

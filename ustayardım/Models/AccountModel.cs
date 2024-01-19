@@ -31,7 +31,7 @@ namespace ustayardım.Models
         [JsonPropertyName("profilImgPath")]
         public string? ProfilImgPath { get; set; }
         [JsonPropertyName("puan")]
-        public int? Puan { get; set; }
+        public double? Puan { get; set; }
         [JsonPropertyName("hakkinda")]
         public string? Hakkinda { get; set; }
         [JsonPropertyName("birthday")]
@@ -62,6 +62,9 @@ namespace ustayardım.Models
         public string? ConfirmNewPassword { get; set; }
         public bool? error { get; set; }
         public bool? succes { get; set; }
+        [JsonPropertyName("kategoriName")]
+        public string? KategoriName { get; set; } 
+        public List<KategoriDTO>? KategoriListesi { get; set; }
     }
 
 }

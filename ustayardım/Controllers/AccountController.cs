@@ -20,6 +20,7 @@ namespace ustayardım.Controllers
             
             if(Usta != null){
                 await GetAddressData(Usta);
+                await KategoriController.GetKategoriler(Usta!);
                 return View(Usta);
             }
 
@@ -32,6 +33,7 @@ namespace ustayardım.Controllers
             var Musteri = await GetMusteri(id);
             if(Musteri != null){
                 await GetAddressData(Musteri);
+                await KategoriController.GetKategoriler(Musteri!);
                 return View(Musteri);
             }
 
@@ -89,6 +91,7 @@ namespace ustayardım.Controllers
                 if (response.IsSuccessStatusCode)
                {
                     var Usta = await GetUsta(id);
+                    await KategoriController.GetKategoriler(Usta!);
 #pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
                     Usta.succes = true;
 #pragma warning restore CS8602
@@ -97,6 +100,7 @@ namespace ustayardım.Controllers
                 else
                 {
                     var Usta = await GetUsta(id);
+                    await KategoriController.GetKategoriler(Usta!);
 #pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
                     Usta.error = true;
 #pragma warning restore CS8602
@@ -140,6 +144,7 @@ namespace ustayardım.Controllers
                 if (response.IsSuccessStatusCode)
                {
                     var Musteri = await GetMusteri(id);
+                    await KategoriController.GetKategoriler(Musteri!);
 #pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
                     Musteri.succes = true;
 #pragma warning restore CS8602
@@ -148,6 +153,7 @@ namespace ustayardım.Controllers
                 else
                 {
                     var Musteri = await GetMusteri(id);
+                    await KategoriController.GetKategoriler(Musteri!);
 #pragma warning disable CS8602 // Olası bir null başvurunun başvurma işlemi.
                     Musteri.error = true;
 #pragma warning restore CS8602
@@ -216,5 +222,6 @@ namespace ustayardım.Controllers
         {
             return await GetAccount(id, "Musteri");
         }
+        
     }
 }

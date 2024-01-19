@@ -1088,9 +1088,11 @@ main {
   }
 }
 .container {
+  margin-bottom: 30px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 @media (min-width: 1024px) {
   .container {
     padding-left: 0;
@@ -5391,12 +5393,16 @@ iframe.wait-autoplay {
   margin-bottom: 1rem;
 }
 #profileList {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 @media (min-width: 1024px) {
   #profileList {
+    padding-left: 1rem;
+    padding-right: 1rem;
     gap: 1.5rem;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ustayardım.Models;
 
 namespace ustayardım.Controllers
@@ -20,9 +21,13 @@ namespace ustayardım.Controllers
                 {
                     string responseData = await response.Content.ReadAsStringAsync();
                     Musteri = JsonSerializer.Deserialize<AccountModel>(responseData);
+                    await KategoriController.GetKategoriler(Musteri!);
                 }
             }
+
             return View(Musteri);
         }
+
+        
     }
 }

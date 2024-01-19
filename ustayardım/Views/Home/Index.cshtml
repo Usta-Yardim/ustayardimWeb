@@ -1,7 +1,10 @@
 @{
   ViewData["Title"] = "Home Page";
 }
-
+@{
+    var ustalar = ViewBag.Ustalar as List<AccountModel>;
+    var KategoriListesi =  ViewBag.Kategoriler as List<KategoriDTO>;
+}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,13 +46,11 @@
               Kategoriler
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Çilingir</a></li>
-              <li><a class="dropdown-item" href="#">Boya ve Badana</a></li>
-              <li><a class="dropdown-item" href="#">Su Tesisatı</a></li>
-              <li><a class="dropdown-item" href="#">Elektrik ve Elektronik</a></li>
-              <li><a class="dropdown-item" href="#">Mobilya ve Marangoz</a></li>
-              <li><a class="dropdown-item" href="#">Isıtma, Soğutma ve Havalandırma</a></li>
-              <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
+              @foreach (var kategori in KategoriListesi ?? Enumerable.Empty<KategoriDTO>())
+                    {
+                        <li><a class="dropdown-item" asp-controller="Kategori" asp-action="KategoriIndex" asp-route-id="@kategori.KategoriId">@kategori.KategoriName</a></li>
+                    }
+                <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
             </ul>
           </div>
               <a class="nav-link" href="#nasil-calisir" style="--i:2;">Nasıl Çalışır?</a>

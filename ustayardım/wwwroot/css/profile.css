@@ -23,6 +23,9 @@ nav{
 }
 
 .navbar-h h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-left: 10px;
     font-size: 1.15rem;
     color: #fff;
@@ -40,6 +43,19 @@ nav{
 .logo{
     width: 120px;
 }
+
+@media (max-width: 1920px) {
+    .user-pic{
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    nav{
+        max-width: max-content !important;
+        padding: 10px 2% !important;
+    }
+  }
 
 .user-pic{
     width: 40px;

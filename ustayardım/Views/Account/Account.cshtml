@@ -40,12 +40,10 @@
               Kategoriler
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Çilingir</a></li>
-              <li><a class="dropdown-item" href="#">Boya ve Badana</a></li>
-              <li><a class="dropdown-item" href="#">Su Tesisatı</a></li>
-              <li><a class="dropdown-item" href="#">Elektrik ve Elektronik</a></li>
-              <li><a class="dropdown-item" href="#">Mobilya ve Marangoz</a></li>
-              <li><a class="dropdown-item" href="#">Isıtma, Soğutma ve Havalandırma</a></li>
+              @foreach (var kategori in Model?.KategoriListesi ?? Enumerable.Empty<KategoriDTO>())
+              {
+                <li><a class="dropdown-item"asp-controller="Kategori" asp-action="Kategori" asp-route-id="@kategori.KategoriId" asp-route-UserId="@Model!.UserId" asp-route-UserType="@Model!.User!.UserType">@kategori.KategoriName</a></li>
+              }
               <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
             </ul>
           </div>
@@ -66,11 +64,6 @@
                     <a asp-controller="Account" asp-action="Account" class="sub-menu-link">
                         <img src="/images/profile.png">
                         <p>Profili Düzenle</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="/images/bookmark.png">
-                        <p>Favori Ustalar</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
@@ -177,28 +170,28 @@
                             <div class="card-body pb-2">
                                 <h6 class="mb-4">Konum Bilgileri</h6>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="@Model.Il.IlId">İl</label>
-                                    <select class="form-select" asp-for="@Model.Il.IlId" id="il" onchange="getIlceler(this)" asp-items="ViewBag.IlListesi">
+                                    <label class="form-label" asp-for="@Model!.Il!.IlId">İl</label>
+                                    <select class="form-select" asp-for="@Model!.Il!.IlId" id="il" onchange="getIlceler(this)" asp-items="ViewBag.IlListesi!">
                                         <option value="" selected>Lütfen İlinizi Seçiniz</option>
                                         <!-- Diğer şehirlerin listesi -->
                                     </select>
-                                    <input type="hidden" asp-for="@Model.Il.IlAdi" id="ilAdiHiddenInput"/>
+                                    <input type="hidden" asp-for="@Model!.Il!.IlAdi" id="ilAdiHiddenInput"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="@Model.Ilce.IlceId">İlçe</label>
-                                    <select class="form-select" asp-for="@Model.Ilce.IlceId" id="ilce" onchange="getMahalleler(this)" asp-items="ViewBag.IlceListesi">
+                                    <label class="form-label" asp-for="@Model!.Ilce!.IlceId">İlçe</label>
+                                    <select class="form-select" asp-for="@Model!.Ilce!.IlceId" id="ilce" onchange="getMahalleler(this)" asp-items="ViewBag.IlceListesi">
                                         <option value="" selected>Lütfen İlçenizi Seçiniz</option>
                                         <!-- İlçeler burada JavaScript kullanılarak doldurulacak -->
                                     </select>
-                                    <input type="hidden" asp-for="@Model.Ilce.IlceAdi" id="ilceAdiHiddenInput"/>
+                                    <input type="hidden" asp-for="@Model!.Ilce!.IlceAdi" id="ilceAdiHiddenInput"/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" asp-for="@Model.Mahalle.MahalleId">Mahalle</label>
-                                    <select class="form-select" asp-for="@Model.Mahalle.MahalleId" id="mahalle" onchange="updateMahalleAdi(this)" asp-items="ViewBag.MahalleListesi">
+                                    <label class="form-label" asp-for="@Model!.Mahalle!.MahalleId">Mahalle</label>
+                                    <select class="form-select" asp-for="@Model!.Mahalle!.MahalleId" id="mahalle" onchange="updateMahalleAdi(this)" asp-items="ViewBag.MahalleListesi">
                                         <option value="" selected>Lütfen Mahallenizi Seçiniz</option>
                                         <!-- Mahalleler burada JavaScript kullanılarak doldurulacak -->
                                     </select>
-                                    <input type="hidden" asp-for="@Model.Mahalle.MahalleAdi" id="MahalleAdiHiddenInput"/>
+                                    <input type="hidden" asp-for="@Model!.Mahalle!.MahalleAdi" id="MahalleAdiHiddenInput"/>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,265 @@
+@{
+  ViewData["Title"] = "Usta Yanında";
+}
+@{
+    var ustalar = ViewBag.Ustalar as List<AccountModel>;
+    var KategoriListesi =  ViewBag.Kategoriler as List<KategoriDTO>;
+    var KategoriName = ViewBag.KategoriName as string; 
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main-css/header.css"/>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/boxicons-2.1.4/css/boxicons.min.css"/>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/css/main-css/styles.css"/>
+    <link rel="stylesheet" href="/css/main-css/burada.css">
+    <link rel="stylesheet" href="/css/main-css/icon.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <title>USTA Yardım</title>
+  </head>
+  <body>
+    <header class="header">
+      <div style="display: flex;">
+            <a asp-controller="Home" asp-action="Index" ><img class="logo-img" src="/assets/logo.png"></a>
+            <a asp-controller="Home" asp-action="Index" class="logo-head">Usta Yardım</a>
+      </div>
+      
+        <input type="checkbox"  id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar-h" style="max-width: min-content;">
+          <a class="nav-link" asp-controller="Home" asp-action="Index"  style="--i:0;">Anasayfa</a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kategoriler
+            </button>
+            <ul class="dropdown-menu">
+                @foreach (var kategori in KategoriListesi ?? Enumerable.Empty<KategoriDTO>())
+                    {
+                        <li><a class="dropdown-item" asp-controller="Kategori" asp-action="KategoriIndex" asp-route-id="@kategori.KategoriId">@kategori.KategoriName</a></li>
+                    }
+                <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
+            </ul>
+          </div>
+              <a class="nav-link" href="#nasil-calisir" style="--i:2;">Nasıl Çalışır?</a>
+              <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
+               <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
+              <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a>
+        </nav>
+    </header>
+    <div class="section__header" style="justify-content: center; margin-top: 7rem; margin-bottom:2rem;">
+      <h2 class="section__title">@ViewBag.KategoriName Ustaları</h2>
+    </div>
+    <section id="profileList" class="container">
+      @foreach (var usta in ustalar!)
+      {
+          <div id="@usta.UserId" class="single-profile">
+        <div class="f-inner">
+          <div class="f-front">
+            <div class="header">
+              <div class="top">
+                <div class="rating">
+                  @if(@usta!.Puan != null){
+                    <i class="ubi ubi-star"></i>@usta!.Puan
+                  }else{<i class="ubi ubi-star"></i>}
+                </div>
+                <button data-flip="back" data-target="_360580" title="Detaylar">
+                  <i class="ubi ubi-actions"></i>
+                </button>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <picture>
+                    <source  type="image/webp" >
+                    <source  type="image/jpeg" >
+                    <img src="@usta!.ProfilImgPath" class="ll entered loaded" alt="@usta!.User!.FullName" width="120" height="120" data-ll-status="loaded">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="body">
+              <a href="#" class="name">@usta!.User!.FullName</a>
+              <a href="#" class="location">@usta!.Il!.IlAdi</a>
+              <a href="#" class="category">@usta!.KategoriName</a>
+            </div>
+            <div class="footer">
+              <div class="title">
+                <a href="#" class="name">@usta!.User!.FullName</a>
+                <a href="#" class="location">@usta!.Il!.IlAdi</a>
+              </div>
+              <div class="wrapper">
+                <button class="btn-call" data-filter-modal="feed/filter?category_id=399995&amp;location_id=0&amp;service_id=0&amp;hash=1700082830">
+                  <span>Hemen Ara <b>@usta!.User!.PhoneNumber</b>
+                  </span>
+                </button>
+                <div class="actions">
+                  <button data-modal-target="profile/rate/360580" title="Puan Ver">
+                    <i class="ubi ubi-star"></i>
+                  </button>
+                  <button data-flip="share" data-target="_360580" title="Paylaş">
+                    <i class="ubi ubi-share"></i>
+                  </button>
+                  <button data-fav="360580" data-model="Profile" title="Kaydet">
+                    <i class="ubi ubi-save"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-back">
+            <div class="f-top">
+              <p class="title">
+                <a href="#">@usta!.User!.FullName</a>
+              </p>
+              <a class="light" href="#">@usta!.Il!.IlAdi</a>
+            </div>
+            <div class="f-body">
+              <div class="title">Hizmet Verdiği Kategoriler</div>
+              <ul>
+                <li>
+                  <a href="#">Marangoz / Mobilyacı</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn-call" href="#">
+              <span>Hemen Ara <b>@usta!.User!.PhoneNumber</b>
+              </span>
+            </a>
+            <div class="f-bottom">
+              <a href="#">Profili İncele</a>
+            </div>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+          <div class="f-share">
+            <p class="title">Paylaş</p>
+            <ul>
+              <li>
+                <a href="#" target="_blank">
+                  <i class="ubi ubi-facebook"></i>Facebook </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <i class="ubi ubi-twitter"></i>Twitter </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <i class="ubi ubi-linkedin"></i>Linkedin </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <i class="ubi ubi-whatsapp2"></i>WhatsApp </a>
+              </li>
+              <li>
+                <button>
+                  <i class="ubi ubi-link"></i>Linki Kopyala </button>
+              </li>
+            </ul>
+            <button data-flip-dismiss="" title="Kapat">
+              <i class="ubi ubi-cross"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      }
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <h4>Güncellemelerden haberdar olmak için abone olun.</h4>
+        <form action="/">
+          <input type="text" placeholder="Lütfen e-posta adresinizi girin." />
+          <button class="btn-aboneOl">Abone Ol</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h5>Usta Yardım</h5>
+          <p>
+            Usta Yardım Türkiye, hayatınızı kolaylaştıracak hizmetlere kolayca ulaşmanızı sağlayan, işin ehli ustalar ile hızlı, güvenilir ve kaliteli hizmet sunan bir teknoloji şirketidir.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Usta Yardım</h4>
+          <a href="#anasayfa">Anasayfa</a>
+          <a href="#kategoriler">Kategoriler</a>
+          <a href="#nasil-calisir">Nasıl Çalışır?</a>
+          <a href="#">Usta Rehberi</a>
+          <a href="#">İletişim</a>
+        </div>
+        <div class="footer__col">
+          <h4>Popüler Hizmetler</h4>
+          <a href="#">Boya ve Badana</a>
+          <a href="#">Ev ve Ofis Temizlik</a>
+          <a href="#">Çilingir</a>
+          <a href="#">Su Tesisatı</a>
+        </div>
+        <div class="footer__col">
+          <h4>Bizi takip edin</h4>
+          <div class="footer__socials">
+            <span>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </span>
+            <span>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Usta Yardım Web Teknolojileri. Tüm hakları saklıdır.
+      </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        let subMenu = document.getElementById("sub-menu");
+        let user_pic = document.getElementById("user-pic");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+1
+        // Klavyeden herhangi bir tuşa basılma olayını dinle
+        document.addEventListener('keydown', function(event) {
+        // Eğer herhangi bir tuşa basılır ve alt menü açıksa, alt menüyü kapat
+        if (subMenu.classList.contains('open-menu')) {
+            subMenu.classList.toggle('open-menu');
+        }
+        });
+
+        // Sayfa kaydırma olayını dinle
+        window.addEventListener('scroll', function() {
+        // Eğer sayfa kaydırılır ve alt menü açıksa, alt menüyü kapat
+        if (subMenu.classList.contains('open-menu')) {
+            subMenu.classList.toggle('open-menu');
+        }
+        });
+    </script>
+  </body>
+</html>

@@ -28,7 +28,7 @@
   <body>
     <header class="header">
       <div style="display: flex;">
-        <a asp-controller="UstaPage" asp-action="ustaPage"><img class="logo-img" src="/assets/logo.png" asp-controller="UstaPage" asp-action="ustaPage"></a>
+        <a asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId"><img class="logo-img" src="/assets/logo.png" ></a>
         <a asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" class="logo-head">Usta Yardım</a>
       </div>
       
@@ -37,19 +37,18 @@
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-x' id="close-icon"></i>
         </label>
-        <nav class="navbar-h">
-          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" style="--i:0;">Anasayfa</a>
+        <nav class="navbar-h" style="max-width: min-content;">
+          <a class="nav-link" asp-controller="UstaPage" asp-action="ustaPage" asp-route-id="@Model.UserId" style="--i:0;">Anasayfa</a>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kategoriler
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Çilingir</a></li>
-              <li><a class="dropdown-item" href="#">Boya ve Badana</a></li>
-              <li><a class="dropdown-item" href="#">Su Tesisatı</a></li>
-              <li><a class="dropdown-item" href="#">Elektrik ve Elektronik</a></li>
-              <li><a class="dropdown-item" href="#">Mobilya ve Marangoz</a></li>
-              <li><a class="dropdown-item" href="#">Isıtma, Soğutma ve Havalandırma</a></li>
+              
+              @foreach (var kategori in Model?.KategoriListesi ?? Enumerable.Empty<KategoriDTO>())
+              {
+                <li><a class="dropdown-item"asp-controller="Kategori" asp-action="Kategori" asp-route-id="@kategori.KategoriId" asp-route-UserId="@Model!.UserId" asp-route-UserType="@Model!.User!.UserType">@kategori.KategoriName</a></li>
+              }
               <li><a class="dropdown-item" href="#">Yetkili Servisler</a></li>
             </ul>
           </div>
@@ -57,8 +56,8 @@
               <a class="nav-link" href="#usta-rehberi" style="--i:3;">Usta Rehberi</a>
               <!-- <a class="nav-link" asp-controller="Auth" asp-action="Usta" style="--i:4;"><button class="btn">Usta Girişi</button></a>
               <a class="nav-link" asp-controller="Auth" asp-action="Musteri" style="--i:5;"><button class="btn">Müşteri Girişi</button></a> -->
-              <img src="@Model.ProfilImgPath" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
-              <h2 onclick="toggleMenu()">@Model.User.FullName</h2>
+              <img src="@Model!.ProfilImgPath" alt="" class="user-pic" id="user-pic" onclick="toggleMenu()">
+              <h2 onclick="toggleMenu()">@Model!.User!.FullName!</h2>
               <div class="sub-menu-wrap" id="sub-menu">
                 <div class="sub-menu">
                     <div class="user-info">
@@ -70,11 +69,6 @@
                     <a asp-controller="Account" asp-action="Account" asp-route-id="@Model.UserId" class="sub-menu-link">
                         <img src="/images/profile.png">
                         <p>Profili Düzenle</p>
-                        <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="/images/Bookmark.png">
-                        <p>Favori Ustalar</p>
                         <span>></span>
                     </a>
                     <a href="#" class="sub-menu-link">
@@ -1542,6 +1536,9 @@
       </div>
     </footer>
 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
     <script src="/js/main.js"></script>
     <script>
         let subMenu = document.getElementById("sub-menu");
